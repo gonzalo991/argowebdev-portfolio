@@ -1,0 +1,39 @@
+.navbar {
+    display: flex !important;
+    flex-direction: column !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to top, #24243e, #302b63, #0f0c29);
+}
+
+.navbar .navbar-menu {
+    padding-bottom: 2rem;
+}
+
+.navbar .navbar-menu .navbar-item {
+    display: flex !important;
+    flex-direction: column !important;
+
+    justify-content: center !important;
+    align-self: center !important;
+
+    color: #fff;
+}
+
+.navbar-item:hover {
+    background-color: rgba(12, 51, 223, 0.6) !important;
+    color: red !important;
+
+    border: solid 2px red !important;
+    border-radius: 35% !important;
+
+    transition: ease 0.8s;
+}
+
+.active {
+    color: red !important;
+}
