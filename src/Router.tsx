@@ -1,18 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-import Abilities from './components/pages/Abilities';
-import Projects from './components/pages/Projects';
 import NotFound from './components/pages/NotFound';
 import Videos from './components/pages/Videos';
+import Formation from './components/pages/Formation';
 
 const Router: React.FC = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/abilities" element={<Abilities />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/certifications" element={<Formation />} />
             <Route path='/videos' element={<Videos />} />
             <Route path="*" element={<NotFound />} />
         </Routes>

@@ -47,10 +47,10 @@ const Navbar: React.FC = () => {
                         About
                     </Link>
 
-                    <Link to="/abilities" className={`navbar-item ${isActiveLink === "Abilities" ? "active" : ""}`}
-                        onClick={() => handleActiveLink("Abilities")}
+                    <Link to="/certifications" className={`navbar-item ${isActiveLink === "Certifications" ? "active" : ""}`}
+                        onClick={() => handleActiveLink("Certifications")}
                     >
-                        Backup
+                        Certifications
                     </Link>
 
                     <Link to="/videos" className={`navbar-item ${isActiveLink === "Videos" ? "active" : ""}`}

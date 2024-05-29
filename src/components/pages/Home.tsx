@@ -4,15 +4,20 @@ import Projects from "./Projects";
 import Card from "../fragments/Card";
 import Contact from "../fragments/Contact";
 import Experience from "../fragments/Experience";
+import presentation from "../data/presentation.json";
+import { CardProps } from "../../interfaces/CardProps";
 
 const Home: React.FC = () => {
+
     return (
         <>
             {/** Título con mi nombre, profesión y boton para descargar el cv */}
-            <div className="presentacion is-flex is-justify-content-center "
-                style={{ margin: "2em 0 0 0" }}
-            >
-                <Card />
+            <div className="presentacion is-flex is-justify-content-center " style={{ margin: "2em 0 0 0" }}>
+                {
+                    presentation.map((item: CardProps, index: number) => (
+                        <Card key={index} {...item} />
+                    ))
+                }
             </div>
 
             <div className="contacto is-flex is-justify-content-center">
@@ -33,7 +38,7 @@ const Home: React.FC = () => {
                 <Experience />
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Home;
