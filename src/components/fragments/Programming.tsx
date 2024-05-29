@@ -1,24 +1,12 @@
-import flask from "../../../public/icon/flask.jpg";
-import spring from "../../../public/icon/spring-boot-logo.png";
-import java from "../../../public/icon/java.png";
-import express from "../../../public/icon/express.png";
-import next from "../../../public/icon/nextjs.png";
-import python from "../../../public/icon/python.jpg";
-import node from "../../../public/icon/node js.png";
-import html from "../../../public/icon/html.png";
-import css from "../../../public/icon/css.png";
-import js from "../../../public/icon/javascript.png";
-import ts from "../../../public/icon/typescript.png";
-
 const Programming: React.FC = () => {
     return (
         <>
             <div className="frameworks">
                 <h3>Frameworks</h3>
-                <img src={spring} alt="logo de spring boot" />
-                <img src={flask} alt="logo de flask" />
-                <img src={express} alt="logo de express js" />
-                <img src={next} alt="logo de next js" />
+                <img src="/icon/spring-boot-logo.png" alt="logo de spring boot" />
+                <img src="/icon/flask.jpg" alt="logo de flask" />
+                <img src="/icon/express.png" alt="logo de express js" />
+                <img src="/icon/nextjs.png" alt="logo de next js" />
             </div>
 
             <div className="programacion">
@@ -27,17 +15,17 @@ const Programming: React.FC = () => {
                 <div className="especialidades">
                     <div className="backend">
                         <h5>Backend</h5>
-                        <img src={java} alt="logo java" />
-                        <img src={python} alt="logo python" />
-                        <img src={node} alt="logo node" />
+                        <img src="/icon/java.png" alt="logo java" />
+                        <img src="/icon/python.png" alt="logo python" />
+                        <img src="/icon/node js.png" alt="logo node" />
                     </div>
 
                     <div className="frontend">
                         <h5>Frontend</h5>
-                        <img src={html} alt="logo html" />
-                        <img src={css} alt="logo css" />
-                        <img src={js} alt="logo javascript" />
-                        <img src={ts} alt="logo typescript" />
+                        <img src="/icon/html.png" alt="logo html" />
+                        <img src="/icon/css.png" alt="logo css" />
+                        <img src="/icon/javascript.png" alt="logo javascript" />
+                        <img src="/icon/typescript.png" alt="logo typescript" />
                     </div>
 
                 </div>

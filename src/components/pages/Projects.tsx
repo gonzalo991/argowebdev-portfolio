@@ -1,6 +1,6 @@
 const Projects: React.FC = () => {
     return (
-        <h1>Media</h1>
+        <h1>Proyectos</h1>
     )
 }
 

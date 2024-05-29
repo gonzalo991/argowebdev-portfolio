@@ -6,6 +6,7 @@ import Contact from "../fragments/Contact";
 import Experience from "../fragments/Experience";
 import presentation from "../data/presentation.json";
 import { CardProps } from "../../interfaces/CardProps";
+import "../../css/home.css";
 
 const Home: React.FC = () => {
 
