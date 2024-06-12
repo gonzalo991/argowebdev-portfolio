@@ -1,13 +1,14 @@
 import { CardProps } from "../../interfaces/CardProps";
+import "../../css/home.css";
 
 const Card: React.FC<CardProps> = (props) => {
     const { title, subtitle, description, imageUrl, githubLink, linkedinLink } = props;
 
     return (
-        <div className="card" style={{ height: "25%", width: "75%" }}>
+        <div className="card tarjeta">
             <div className="card-image">
                 <figure className="image">
-                    <img src={imageUrl} alt="Placeholder image" />
+                    <img className="card-img" src={imageUrl} alt="Placeholder image" />
                 </figure>
             </div>
             <div className="card-content">

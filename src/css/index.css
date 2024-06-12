@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Poetsen+One&display=swap');
 
 * {
 
@@ -6,8 +6,12 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: "Katibeh", serif;
+    font-family: "Poetsen One", sans-serif;
     font-weight: 400;
-    font-size: 1.9rem;
     font-style: normal;
+}
+
+body {
+    background-color: #1a2431;
+    color: #fff;
 }

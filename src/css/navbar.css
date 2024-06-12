@@ -4,10 +4,6 @@
 
     justify-content: center !important;
     align-items: center !important;
-
-    background: #0f0c29;
-    background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to top, #24243e, #302b63, #0f0c29);
 }
 
 .navbar .navbar-menu {
@@ -20,8 +16,6 @@
 
     justify-content: center !important;
     align-self: center !important;
-
-    color: #fff;
 }
 
 .navbar-item:hover {

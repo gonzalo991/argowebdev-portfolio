@@ -1,0 +1,143 @@
+/** -------------- Estilos de Presentación Developer.tsx -------------- */
+
+.dev-presentacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2vh;
+}
+
+.dev-presentacion .dev-nombre {
+    margin: 0.7vh;
+    padding: 0.8vh;
+
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.dev-presentacion .dev-nombre .subtitulos .dev-subtitulo {
+    color: rgb(26, 183, 223);
+}
+
+
+.dev-presentacion .dev-img {
+    margin: 1.3em;
+
+    width: 20rem;
+    height: 20rem;
+    box-sizing: border-box;
+
+    border: 2px rgb(26, 183, 223) solid;
+    border-radius: 50%;
+    border-image: auto;
+
+    overflow: hidden;
+    box-shadow: 0 10px 25px 0px rgb(240, 238, 238);
+
+    transform: translatey(0px);
+    -webkit-animation: flotar 6s ease-in-out infinite;
+    animation: flotar 6s ease-in-out infinite;
+}
+
+.dev-presentacion .dev-img .foto-presentacion {
+    border-radius: 50%;
+}
+
+@-webkit-keyframes flotar {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+@keyframes flotar {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+.dev-presentacion .botones {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 1.2em;
+    padding: 0.6em;
+}
+
+.dev-presentacion .botones .curriculum-boton {
+    margin: 0.3em;
+    padding: 0.2em;
+
+    font-size: 1.4rem;
+
+    outline: 6px dashed #E0E4CC;
+    box-shadow: 0 0 0 6px rgb(13, 193, 238);
+    animation: 1s animateBorder infinite;
+    border-radius: 10px;
+
+    background-color: rgb(26, 183, 223);
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes animateBorder {
+    to {
+        outline-color: #E0E4CC;
+        box-shadow: 0 0 0 6px #69D2E7;
+    }
+}
+
+
+
+/** -------------- Estilos de tarjeta Card.tsx -------------- */
+
+.tarjeta {
+    height: 50rem;
+    width: 30rem;
+
+    margin: 1em;
+    padding: 0.1em;
+
+    border: 2px solid red;
+    border-radius: 5px;
+
+    border: 1px solid transparent;
+    /* Establece un borde transparente */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    /* Agrega un difuminado blanco */
+}
+
+/** -------------- Presentación -------------- */
+
+/** -------------- Presentación -------------- */
+
+/** -------------- Presentación -------------- */
+
+/** -------------- Presentación -------------- */
