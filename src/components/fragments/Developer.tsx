@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../css/home.css";
-import { FaGithub } from "react-icons/fa6";
+import { GrGithub } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
 
@@ -24,16 +24,16 @@ const Developer: React.FC = () => {
                 </div>
 
                 <div className="botones">
-                    <Link to="" className="curriculum-boton">Descargar Cv</Link>
+                    <Link to="" className="curriculum-boton" target="_blank">Descargar Cv</Link>
                 </div>
 
                 <div className="sociales">
-                    <Link to="https://github.com/gonzalo991" className="github-boton">
-                        <FaGithub />
+                    <Link to="https://github.com/gonzalo991" className="github-boton" target="_blank">
+                        <GrGithub className="github-boton-icon" />
                     </Link>
                     <Link to="https://www.linkedin.com/in/gonzalo-araya-416a6520b/"
-                        className="linkedin-boton">
-                        <GrLinkedin />
+                        className="linkedin-boton" target="_blank">
+                        <GrLinkedin className="linkedin-boton-icon" />
                     </Link>
                 </div>
 

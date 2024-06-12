@@ -1,3 +1,5 @@
+@import url("./keyframes.css");
+
 /** -------------- Estilos de Presentación Developer.tsx -------------- */
 
 .dev-presentacion {
@@ -21,7 +23,6 @@
     color: rgb(26, 183, 223);
 }
 
-
 .dev-presentacion .dev-img {
     margin: 1.3em;
 
@@ -43,40 +44,6 @@
 
 .dev-presentacion .dev-img .foto-presentacion {
     border-radius: 50%;
-}
-
-@-webkit-keyframes flotar {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-        transform: translatey(-20px);
-    }
-
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-}
-
-@keyframes flotar {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
-
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-        transform: translatey(-20px);
-    }
-
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
 }
 
 .dev-presentacion .botones {
@@ -107,13 +74,47 @@
     color: rgb(255, 255, 255);
 }
 
-@keyframes animateBorder {
-    to {
-        outline-color: #E0E4CC;
-        box-shadow: 0 0 0 6px #69D2E7;
-    }
+.botones .curriculum-boton:hover {
+    background-color: rgb(231, 105, 210);
+    outline: 6px dashed rgb(224, 228, 204);
+    box-shadow: 0 0 0 6px rgb(231, 105, 210);
+    border: solid 3px rgb(231, 105, 210);
 }
 
+.dev-presentacion .sociales {
+    font-size: 2.5rem;
+}
+
+.dev-presentacion .sociales .github-boton {
+    margin: 0.3em;
+    padding-right: 0.5em;
+
+    text-decoration: none;
+    color: #E769D2;
+}
+
+.dev-presentacion .sociales .linkedin-boton .linkedin-boton-icon {
+    text-decoration: none;
+    color: #E769D2;
+}
+
+.dev-presentacion .sociales .linkedin-boton-icon {
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.dev-presentacion .sociales .github-boton-icon {
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.dev-presentacion .sociales .github-boton .github-boton-icon:hover {
+    animation: blink-1 0.6s both;
+    color: rgb(105, 210, 231);
+}
+
+.dev-presentacion .sociales .linkedin-boton .linkedin-boton-icon:hover {
+    animation: blink-1 0.6s both;
+    color: rgb(105, 210, 231);
+}
 
 
 /** -------------- Estilos de tarjeta Card.tsx -------------- */
@@ -140,4 +141,4 @@
 
 /** -------------- Presentación -------------- */
 
-/** -------------- Presentación -------------- */
+/** -------------- Presentacion -------------- */
