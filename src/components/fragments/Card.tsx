@@ -1,5 +1,5 @@
 import { CardProps } from "../../interfaces/CardProps";
-import "../../css/home.css";
+import "../../css/card.css";
 
 const Card: React.FC<CardProps> = (props) => {
     const { title, subtitle, description, imageUrl, githubLink, linkedinLink } = props;

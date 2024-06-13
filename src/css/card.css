@@ -1,0 +1,17 @@
+/** -------------- Estilos de tarjeta Card.tsx -------------- */
+
+.tarjeta {
+    height: 50rem;
+    width: 30rem;
+
+    margin: 1em;
+    padding: 0.1em;
+
+    border: 2px solid red;
+    border-radius: 5px;
+
+    border: 1px solid transparent;
+    /* Establece un borde transparente */
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    /* Agrega un difuminado blanco */
+}

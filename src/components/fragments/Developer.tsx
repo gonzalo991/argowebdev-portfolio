@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import "../../css/home.css";
+import "../../css/developer.css";
 import { GrGithub } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
-import { MdEmail } from "react-icons/md";
 
 
 const Developer: React.FC = () => {

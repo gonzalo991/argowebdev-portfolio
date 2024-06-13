@@ -6,7 +6,7 @@ import Contact from "../fragments/Contact";
 import Experience from "../fragments/Experience";
 import presentation from "../data/presentation.json";
 import { CardProps } from "../../interfaces/CardProps";
-import "../../css/home.css";
+import "../../css/developer.css";
 import Developer from "../fragments/Developer";
 
 const Home: React.FC = () => {
@@ -25,13 +25,6 @@ const Home: React.FC = () => {
                 < Developer />
             </div>
 
-
-            <div className="contacto is-flex is-justify-content-center">
-                <div className="contenido">
-                    <Contact />
-                </div>
-            </div>
-
             <div className="habilidades">
                 <Abilities />
             </div>
@@ -43,6 +36,13 @@ const Home: React.FC = () => {
             <div className="experiencia-laboral">
                 <Experience />
             </div>
+
+            <div className="contacto is-flex is-justify-content-center">
+                <div className="contenido">
+                    <Contact />
+                </div>
+            </div>
+
         </>
     );
 };
