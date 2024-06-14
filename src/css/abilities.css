@@ -1,6 +1,6 @@
 /** -------------- Estilos Stack Tecnológico Abilities.tsx -------------- */
 @import url("./keyframes.css");
-
+@import url("./colors.css");
 
 .habilidades-titulo {
     margin: 1.2em;
@@ -9,7 +9,7 @@
     text-align: center;
     text-decoration: underline;
 
-    color: rgb(26, 183, 223);
+    color: var(--color-primario);
 }
 
 .programming-titulo {
@@ -19,7 +19,7 @@
     text-align: center;
     text-decoration: underline;
 
-    color: rgb(231, 105, 210);
+    color: var(--color-terciario);
 }
 
 .programming-icon {
@@ -30,4 +30,11 @@
     padding: 0.5em;
 
     border-radius: 50%;
+    -webkit-animation: flotar 6s ease-in-out infinite;
+    animation: flotar 6s ease-in-out infinite;
+}
+
+.programming-subtitulo {
+    text-align: center;
+    color: var(--color-secundario);
 }

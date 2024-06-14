@@ -2,7 +2,7 @@ import { CardProps } from "../../interfaces/CardProps";
 import "../../css/card.css";
 
 const Card: React.FC<CardProps> = (props) => {
-    const { title, subtitle, description, imageUrl, githubLink, linkedinLink } = props;
+    const { title, subtitle, description, imageUrl, githubLink, projectLink } = props;
 
     return (
         <div className="card tarjeta">
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = (props) => {
                     <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                 </div>
             </div>
-            {(githubLink || linkedinLink) && (
+            {(githubLink || projectLink) && (
                 <footer className="card-footer">
                     {githubLink && (
                         <p className="card-footer-item">
@@ -34,9 +34,9 @@ const Card: React.FC<CardProps> = (props) => {
                             </span>
                         </p>
                     )}
-                    {linkedinLink && (
+                    {projectLink && (
                         <p className="card-footer-item">
-                            <span> Ir a <a href={linkedinLink}>LinkedIn</a> </span>
+                            <span> Ir a <a href={projectLink}>Url</a> </span>
                         </p>
                     )}
                 </footer>

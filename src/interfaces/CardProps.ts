@@ -4,5 +4,5 @@ export interface CardProps {
     description: string;
     imageUrl: string;
     githubLink: string;
-    linkedinLink: string;
+    projectLink: string;
 }

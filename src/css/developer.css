@@ -1,4 +1,5 @@
 @import url("./keyframes.css");
+@import url("./colors.css");
 
 /** -------------- Estilos de Presentación Developer.tsx -------------- */
 
@@ -20,7 +21,7 @@
 }
 
 .dev-presentacion .dev-nombre .subtitulos .dev-subtitulo {
-    color: rgb(26, 183, 223);
+    color: var(--color-primario);
 }
 
 .dev-presentacion .dev-img {
@@ -30,12 +31,12 @@
     height: 20rem;
     box-sizing: border-box;
 
-    border: 2px rgb(26, 183, 223) solid;
+    border: 2px var(--color-primario) solid;
     border-radius: 50%;
     border-image: auto;
 
     overflow: hidden;
-    box-shadow: 0 10px 25px 0px rgb(240, 238, 238);
+    box-shadow: 0 10px 25px 0px var(--blanco);
 
     transform: translatey(0px);
     -webkit-animation: flotar 6s ease-in-out infinite;
@@ -63,22 +64,22 @@
 
     font-size: 1.4rem;
 
-    outline: 6px dashed #E0E4CC;
-    box-shadow: 0 0 0 6px rgb(13, 193, 238);
+    outline: 6px dashed var(--outlines);
+    box-shadow: 0 0 0 6px var(--color-primario);
     animation: 1s animateBorder infinite;
     border-radius: 10px;
 
-    background-color: rgb(26, 183, 223);
+    background-color: var(--color-primario);
 
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--blanco);
 }
 
 .botones .curriculum-boton:hover {
-    background-color: rgb(231, 105, 210);
-    outline: 6px dashed rgb(224, 228, 204);
-    box-shadow: 0 0 0 6px rgb(231, 105, 210);
-    border: solid 3px rgb(231, 105, 210);
+    background-color: var(--color-secundario);
+    outline: 6px dashed var(--outlines);
+    box-shadow: 0 0 0 6px var(--color-secundario);
+    border: solid 3px var(--color-secundario);
 }
 
 .dev-presentacion .sociales {
@@ -90,15 +91,14 @@
     padding-right: 0.5em;
 
     text-decoration: none;
-    color: #E769D2;
+    color: var(--color-secundario);
 }
 
 .dev-presentacion .sociales .linkedin-boton .linkedin-boton-icon {
     text-decoration: none;
-    color: #E769D2;
+    color: var(--color-secundario);
     animation: heartbeat 1.5s ease-in-out infinite both;
 }
-
 
 .dev-presentacion .sociales .github-boton-icon {
     animation: heartbeat 1.5s ease-in-out infinite both;
@@ -106,10 +106,10 @@
 
 .dev-presentacion .sociales .github-boton .github-boton-icon:hover {
     animation: blink-1 0.6s both;
-    color: rgb(105, 210, 231);
+    color: var(--color-primario);
 }
 
 .dev-presentacion .sociales .linkedin-boton .linkedin-boton-icon:hover {
     animation: blink-1 0.6s both;
-    color: rgb(105, 210, 231);
+    color: var(--color-primario);
 }
