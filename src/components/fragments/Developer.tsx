@@ -3,7 +3,6 @@ import "../../css/developer.css";
 import { GrGithub } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
 
-
 const Developer: React.FC = () => {
     return (
         <>

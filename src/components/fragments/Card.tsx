@@ -1,8 +1,12 @@
 import { CardProps } from "../../interfaces/CardProps";
 import "../../css/card.css";
+import { GrGithub } from "react-icons/gr";
+import { GrLink } from "react-icons/gr";
+import { Link } from "react-router-dom";
+
 
 const Card: React.FC<CardProps> = (props) => {
-    const { title, subtitle, description, imageUrl, githubLink, projectLink } = props;
+    const { title, description, imageUrl, githubLink, githubLinkBackend, projectLink } = props;
 
     return (
         <div className="card tarjeta">
@@ -15,14 +19,11 @@ const Card: React.FC<CardProps> = (props) => {
                 <div className="media">
                     <div className="media-content">
                         <p className="title is-4">{title}</p>
-                        <p className="subtitle is-6">{subtitle}</p>
                     </div>
                 </div>
 
                 <div className="content">
                     {description}
-                    <br />
-                    <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                 </div>
             </div>
             {(githubLink || projectLink) && (
@@ -30,13 +31,25 @@ const Card: React.FC<CardProps> = (props) => {
                     {githubLink && (
                         <p className="card-footer-item">
                             <span>
-                                Ir a <a href={githubLink}>Github</a>
+                                <p className="icon-titulo">Front</p>
+                                <Link target="_blank" className="github-boton" to={githubLink}><GrGithub className="github-boton-icon" /></Link>
+                            </span>
+                        </p>
+                    )}
+                    {githubLinkBackend && (
+                        <p className="card-footer-item">
+                            <span>
+                                <p className="icon-titulo">Back</p>
+                                <Link target="_blank" className="github-boton" to={githubLinkBackend}><GrGithub className="github-boton-icon" /></Link>
                             </span>
                         </p>
                     )}
                     {projectLink && (
                         <p className="card-footer-item">
-                            <span> Ir a <a href={projectLink}>Url</a> </span>
+                            <span>
+                                <p className="icon-titulo">Link</p>
+                                <Link target="_blank" className="github-boton" to={projectLink}><GrLink className="github-boton-icon" /></Link>
+                            </span>
                         </p>
                     )}
                 </footer>

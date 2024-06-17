@@ -1,17 +1,42 @@
 /** -------------- Estilos de tarjeta Card.tsx -------------- */
+@import url("./keyframes.css");
+@import url("./colors.css");
+
 
 .tarjeta {
-    height: 50rem;
-    width: 30rem;
+    height: auto;
+    width: auto;
 
-    margin: 1em;
-    padding: 0.1em;
+    margin: 1.7em;
+    padding: 0.2em;
 
-    border: 2px solid red;
     border-radius: 5px;
-
     border: 1px solid transparent;
     /* Establece un borde transparente */
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
     /* Agrega un difuminado blanco */
+}
+
+.github-boton {
+    margin: 0.3em;
+    padding-right: 0.5em;
+
+    font-size: 2rem;
+
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+.github-boton-icon {
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.github-boton .github-boton-icon:hover {
+    animation: blink-1 0.6s both;
+    color: var(--color-primario);
+}
+
+.icon-titulo {
+    font-size: 1.5rem;
+    color: var(--color-primario);
 }
