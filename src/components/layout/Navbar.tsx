@@ -20,31 +20,31 @@ const Navbar: React.FC = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mx-auto justify-content-center text-center"> {/* Alineación horizontal en el centro */}
                         <li className="nav-item">
-                            <Link to="/" className={`navbar-item ${isActiveLink === "Home" ? "active" : ""} text-white`}
-                                onClick={() => handleActiveLink("Home")}
+                            <Link to="/" className={`navbar-item ${isActiveLink === "Inicio" ? "active" : ""} text-white`}
+                                onClick={() => handleActiveLink("Inicio")}
                             >
-                                Home
+                                Inicio
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/certifications" className={`navbar-item ${isActiveLink === "Certifications" ? "active" : ""} text-white`}
+                            <Link to="/certificaciones" className={`navbar-item ${isActiveLink === "Certificaciones" ? "active" : ""} text-white`}
                                 onClick={() => handleActiveLink("Certifications")}
                             >
-                                Certifications
+                                Certificaciones
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/about" className={`navbar-item ${isActiveLink === "About" ? "active" : ""} text-white`}
-                                onClick={() => handleActiveLink("About")}
+                            <Link to="/experiencia" className={`navbar-item ${isActiveLink === "Experiencia" ? "active" : ""} text-white`}
+                                onClick={() => handleActiveLink("Experiencia")}
                             >
-                                About
+                                Experiencia
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/videos" className={`navbar-item ${isActiveLink === "Videos" ? "active" : ""} text-white`}
-                                onClick={() => handleActiveLink("Videos")}
+                            <Link to="/proyectos" className={`navbar-item ${isActiveLink === "Proyectos" ? "active" : ""} text-white`}
+                                onClick={() => handleActiveLink("Proyectos")}
                             >
-                                Videos
+                                Proyectos
                             </Link>
                         </li>
                     </ul>

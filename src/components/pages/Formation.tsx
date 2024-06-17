@@ -1,20 +1,32 @@
+import "../../css/experiencia.css";
+import { certificados } from "../data/certifications";
+
 const Formation: React.FC = () => {
     return (
         <>
-            <h1 className="titulo-formaciones">Formación y Certificaciones</h1>
+            <h3 className="experiencia-titulo text-center mt-5 mb-5">Formación y Certificaciones</h3>
 
-            <div className="certificados">
-                <h3>Universidad Tecnológica Nacional - 2021 a 2023</h3>
-                <p>Técnico Universitario en Programación</p>
-                <h3>Educación IT Telecom Digitalers - Marzo 2023, Octubre 2023</h3>
-                <p>Programador Frontend React</p>
-                <h3>UTN BA - Extensión Universitaria - Octubre 2021, Diciembre 2021</h3>
-                <p>Programador fullstack node js</p>
-                <h3>Instituto EggTech - Marzo 2021 a Noviembre 2021</h3>
-                <p>Programador fullstack Java</p>
-                <h3>International English Institute - 2003 a 2008</h3>
-                <p>Diploma de Capacidad Superior en Inglés</p>
-            </div>
+            {
+                certificados.map((cert, idx) => {
+                    const { institucion, titulo, fechaInicio, fechaFin }: {
+                        institucion: string;
+                        titulo: string;
+                        fechaInicio: string;
+                        fechaFin: string;
+                    } = cert;
+
+                    return (
+                        <div className="experiencia-contenedor mt-3 mb-4 ms-4 me-4 text-center" key={idx}>
+                            <h4 className="experiencia-texto mt-3 mb-3"><span>Institución:</span> {institucion}</h4>
+                            <p className="experiencia-texto"><span>Título:</span> {titulo}</p>
+                            <p className="experiencia-texto"><span>Fecha Inicio:</span> {fechaInicio}</p>
+                            <p className="experiencia-texto"><span>Fecha Fin:</span> {fechaFin}</p>
+                            <hr className="linea mt-5 mb-3" />
+                        </div>
+                    )
+                })
+            }
+
         </>
     )
 }

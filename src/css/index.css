@@ -20,3 +20,14 @@ body {
     color: #fff;
     overflow: hidden;
 }
+
+.footer {
+    background: #1a2431;
+}
+
+@media screen and (min-width: 900px) {
+    .proyectos-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -10,7 +10,7 @@ const Card: React.FC<CardProps> = (props) => {
 
     return (
         <div className="card tarjeta">
-            <div className="card-image">
+            <div className="card-image mb-5">
                 <figure className="image">
                     <img className="card-img" src={imageUrl} alt="Placeholder image" />
                 </figure>

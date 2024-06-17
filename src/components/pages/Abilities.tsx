@@ -8,7 +8,7 @@ const Abilities: React.FC = () => {
 
     return (
         <>
-            <h1 className="habilidades-titulo">Stack Tecnológico</h1>
+            <h1 className="habilidades-titulo text-center ms-5">Stack Tecnológico</h1>
 
             <div className="herramientas-bibliotecas">
                 <Tools />

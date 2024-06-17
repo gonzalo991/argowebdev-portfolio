@@ -11,7 +11,7 @@ export const projects: CardProps[] = [
     },
     {
         "title": "Von Haus Lola Mora",
-        "description": "Aplicación web creada para el criadero de perros pastor alemán Von Haus Lola Mora de la ciudad de El Tala - Salta.",
+        "description": "Aplicación web creada para el criadero de perros pastor alemán Von Haus Lola Mora de la ciudad de El Tala - Salta. Su finalidad es promocionar y dar a conocer el criadero para que el cliente pueda tener más ventas a nivel local, nacional e internacional.",
         "imageUrl": "img/vonhaus.png",
         "githubLink": "https://github.com/gonzalo991/von-haus-frontend",
         "githubLinkBackend": "https://github.com/gonzalo991/von-haus-backend",

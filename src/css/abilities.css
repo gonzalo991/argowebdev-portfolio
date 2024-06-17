@@ -38,3 +38,39 @@
     text-align: center;
     color: var(--color-secundario);
 }
+
+@media screen and (min-width: 900px) {
+    .tools {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .herramientas-img {
+        margin-left: 4em;
+        padding: 1em;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bibliotecas-img {
+        margin-left: 4em;
+        padding: 1em;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .especialidades {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .programming-img {
+        margin-left: 4em;
+        padding: 1em;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
