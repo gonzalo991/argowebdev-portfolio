@@ -1,33 +1,17 @@
+@import url("./colors.css");
+
+
 .navbar {
-    display: flex !important;
-    flex-direction: column !important;
-
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.navbar .navbar-menu {
-    padding-bottom: 2rem;
-}
-
-.navbar .navbar-menu .navbar-item {
-    display: flex !important;
-    flex-direction: column !important;
-
-    justify-content: center !important;
-    align-self: center !important;
+    background-color: var(--color-primario);
 }
 
 .navbar-item:hover {
-    background-color: rgba(12, 51, 223, 0.6) !important;
-    color: red !important;
-
-    border: solid 2px red !important;
-    border-radius: 35% !important;
-
+    color: var(--color-secundario) !important;
+    border-radius: 10px;
     transition: ease 0.8s;
 }
 
 .active {
-    color: red !important;
+    color: var(--color-secundario) !important;
+    border-radius: 10px;
 }

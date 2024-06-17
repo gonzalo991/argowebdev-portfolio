@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import '../../css/navbar.css';
 import { useState } from "react";
-import { IoLogoReact } from "react-icons/io5";
 
 const Navbar: React.FC = () => {
     const [isActiveLink, setIsActiveLink] = useState<string>("Home");
@@ -11,9 +10,8 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/"><IoLogoReact /></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -28,7 +26,7 @@ const Navbar: React.FC = () => {
                         </li>
                         <li className="nav-item">
                             <Link to="/certificaciones" className={`navbar-item ${isActiveLink === "Certificaciones" ? "active" : ""} text-white`}
-                                onClick={() => handleActiveLink("Certifications")}
+                                onClick={() => handleActiveLink("Certificaciones")}
                             >
                                 Certificaciones
                             </Link>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../../css/developer.css";
 import { GrGithub } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
+import About from "../pages/About";
 
 const Developer: React.FC = () => {
     return (
@@ -21,8 +22,10 @@ const Developer: React.FC = () => {
                         alt="oscar gonzalo araya fullstack developer" />
                 </div>
 
+                <About />
+
                 <div className="botones">
-                    <Link to="" className="curriculum-boton" target="_blank">Descargar Cv</Link>
+                    <a href="aqui va el link al pdf del cv" className="curriculum-boton" download>Descargar Cv</a>
                 </div>
 
                 <div className="sociales">

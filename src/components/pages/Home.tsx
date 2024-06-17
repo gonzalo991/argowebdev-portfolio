@@ -1,7 +1,7 @@
 import React from "react";
 import Abilities from "./Abilities";
-import "../../css/developer.css";
 import Developer from "../fragments/Developer";
+import "../../css/developer.css";
 
 const Home: React.FC = () => {
 
@@ -16,6 +16,7 @@ const Home: React.FC = () => {
                 <Abilities />
             </div>
         </>
+
     );
 };
 
