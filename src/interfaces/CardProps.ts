@@ -5,4 +5,4 @@ export interface CardProps {
     githubLink: string;
     githubLinkBackend: string;
     projectLink: string;
-}  
+} 
