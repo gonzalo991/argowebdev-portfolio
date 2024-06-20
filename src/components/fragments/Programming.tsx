@@ -10,6 +10,7 @@ import html from "../icon/html.png";
 import css from "../icon/css.png";
 import javascript from "../icon/javascript.png";
 import typescript from "../icon/typescript.png";
+import angular from "../icon/angular.png";
 
 const Programming: React.FC = () => {
     return (
@@ -22,6 +23,7 @@ const Programming: React.FC = () => {
                     <img className="programming-icon" src={flask} alt="logo de flask" />
                     <img className="programming-icon" src={express} alt="logo de express js" />
                     <img className="programming-icon" src={next} alt="logo de next js" />
+                    <img className="programming-icon" src={angular} alt="logo de angular js" />
                 </div>
             </div>
 
