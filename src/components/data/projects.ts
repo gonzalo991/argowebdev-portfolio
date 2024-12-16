@@ -2,6 +2,7 @@ import { CardProps } from "../../interfaces/CardProps";
 import reciclarg from "../img/reciclarg.png";
 import vonhaus from "../img/vonhaus.png";
 import digitalMirage from '../img/digitalmirage.png';
+import pockyfai from '../img/PockyfaiSplash.png';
 
 let reciclargString: string = reciclarg;
 let vonhausString: string = vonhaus;
@@ -32,5 +33,13 @@ export const projects: CardProps[] = [
         "githubLink": "https://github.com/gonzalo991/Digital-Mirage-Frontend",
         "githubLinkBackend": "https://github.com/gonzalo991/Digital-Mirage-Backend",
         "projectLink": "https://gonzalo991.github.io/Digital-Mirage-Frontend/"
+    },
+    {
+        "title": "Pockyfai",
+        "description": "Aplicación movil para el manejo de finanzas personales para control de gastos, ingresos y ahorros, la app cuenta con las funcionalidades necesarias para llevar el seguimiento de tu economía personal y mejorar tus ingresos,esta creada para dispositivos android, creada con expo y react-native.",
+        "imageUrl": pockyfai,
+        "githubLink": "",
+        "githubLinkBackend": "",
+        "projectLink": "https://play.google.com/store/apps/details?id=com.gonzalo991.pockyfai"
     },
 ];

@@ -3,6 +3,11 @@
 
 .navbar {
     background-color: var(--color-primario);
+    position: fixed;
+    top: 0;         /* Fija la barra de navegación en la parte superior */
+    left: 0;
+    right: 0;
+    z-index: 999;   /* Asegura que la navbar esté encima de otros contenidos */
 }
 
 .navbar-item:hover {

@@ -14,7 +14,7 @@ export const certificados: CertificationsProps[] = [
         "fechaFin": "30 de Octubre 2023",
     },
     {
-        "institucion": "Universidad Tecnológica Naciona - Buenos Aires Extensión Universitaria",
+        "institucion": "Universidad Tecnológica Nacional - Buenos Aires Extensión Universitaria",
         "titulo": "Fullstack Developer",
         "fechaInicio": "04 de Diciembre 2021",
         "fechaFin": "14 de Febrero 2022",

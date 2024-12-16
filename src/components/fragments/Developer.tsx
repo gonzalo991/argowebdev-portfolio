@@ -12,7 +12,7 @@ const Developer: React.FC = () => {
             <div className="dev-presentacion">
                 <div className="dev-nombre">
                     <div className="subtitulos">
-                        <h1 className="dev-titulo">Soy Gonzalo &#128526;</h1>
+                        <h1 className="dev-titulo mt-5">Soy Gonzalo &#128526;</h1>
                         <h3 className="dev-subtitulo">Técnico Universitario en Programación</h3>
                         <h5 className="dev-subtitulo-dos">Fullstack Developer</h5>
                     </div>
