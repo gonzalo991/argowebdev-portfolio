@@ -4,7 +4,7 @@ import { GrGithub } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
 import About from "../pages/About";
 import mifoto from "../img/mifoto.jpg";
-import curriculum from "../files/CvOscarGonzaloAraya.pdf";
+import curriculum from "../files/CvGonzaloAraya.pdf";
 
 const Developer: React.FC = () => {
     return (
