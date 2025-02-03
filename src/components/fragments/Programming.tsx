@@ -9,7 +9,7 @@ import javascript from "../icon/javascript.png";
 import typescript from "../icon/typescript.png";
 
 const Programming: React.FC = () => {
-    const nestLogoUrl = "https://cdn.icon-icons.com/icons2/2699/PNG/512/nestjs_logo_icon_169927.png";
+    const nestLogoUrl = "https://imgs.search.brave.com/MBfBI3Juf-OJ216GfFIjSrouky7b9TNvZKhKT-f9_hs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzgwODkw/My9zY3JlZW5zaG90/cy8zODMxODYyL2Ry/aWJiYmxlX3N6YWJs/b25fXzFfMS5wbmc_/cmVzaXplPTQwMHgz/MDAmdmVydGljYWw9/Y2VudGVy";
     const mysqlLogo = "https://www.logo.wine/a/logo/MySQL/MySQL-Logo.wine.svg";
     const mongodbLogo = "https://www.pngall.com/wp-content/uploads/13/Mongodb-PNG-Picture.png";
     const expoLogo = "https://play-lh.googleusercontent.com/algsmuhitlyCU_Yy3IU7-7KYIhCBwx5UJG4Bln-hygBjjlUVCiGo1y8W5JNqYm9WW3s=w240-h480-rw";
