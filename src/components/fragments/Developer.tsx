@@ -3,7 +3,7 @@ import "../../css/developer.css";
 import { GrGithub } from "react-icons/gr";
 import { GrLinkedin } from "react-icons/gr";
 import About from "../pages/About";
-import mifoto from "../img/mifoto.jpg";
+import mifoto from "../img/mifoto2.jpg";
 import curriculum from "../files/CvGonzaloAraya.pdf";
 
 const Developer: React.FC = () => {
@@ -20,6 +20,7 @@ const Developer: React.FC = () => {
 
                 <div className="dev-img">
                     <img className="foto-presentacion"
+                    
                         src={mifoto}
                         alt="oscar gonzalo araya fullstack developer" />
                 </div>

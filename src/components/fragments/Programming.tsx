@@ -7,6 +7,8 @@ import html from "../icon/html.png";
 import css from "../icon/css.png";
 import javascript from "../icon/javascript.png";
 import typescript from "../icon/typescript.png";
+import java from "../icon/java.png";
+import spring from "../icon/spring-boot-logo.png";
 
 const Programming: React.FC = () => {
     const nestLogoUrl = "https://imgs.search.brave.com/MBfBI3Juf-OJ216GfFIjSrouky7b9TNvZKhKT-f9_hs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzgwODkw/My9zY3JlZW5zaG90/cy8zODMxODYyL2Ry/aWJiYmxlX3N6YWJs/b25fXzFfMS5wbmc_/cmVzaXplPTQwMHgz/MDAmdmVydGljYWw9/Y2VudGVy";
@@ -23,7 +25,7 @@ const Programming: React.FC = () => {
                 <div className="text-center mt-3 mb-3">
                     <img className="programming-icon" src={nestLogoUrl} alt="logo de nest js" />
                     <img className="programming-icon" src={flask} alt="logo de flask" />
-                    <img className="programming-icon" src={fastApiLogo} alt="logo de fast api" />
+                    <img className="programming-icon" src={spring} alt="logo de spring boot" />
                     <img className="programming-icon" src={express} alt="logo de express js" />
                     <img className="programming-icon" src={next} alt="logo de next js" />
                     <img className="programming-icon" src={expoLogo} alt="logo de expo" />
@@ -37,7 +39,7 @@ const Programming: React.FC = () => {
                     <div className="backend">
                         <h5 className="programming-subtitulo mt-3 mb-3">Backend y Bases de datos</h5>
                         <div className="programming-img text-center">
-                            <img className="programming-icon" src={javascript} alt="logo javascript" />
+                            <img className="programming-icon" src={java} alt="logo java" />
                             <img className="programming-icon" src={python} alt="logo python" />
                             <img className="programming-icon" src={mysqlLogo} alt="logo de mysql" />
                             <img className="programming-icon" src={mongodbLogo} alt="logo de mongo db" />

@@ -41,6 +41,10 @@
     transform: translatey(0px);
     -webkit-animation: flotar 6s ease-in-out infinite;
     animation: flotar 6s ease-in-out infinite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dev-presentacion .dev-img .foto-presentacion {

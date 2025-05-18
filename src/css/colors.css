@@ -1,8 +1,8 @@
 :root {
-    --color-primario: rgb(13, 193, 238);
-    --color-secundario: rgb(238, 13, 193);
-    --color-terciario: rgb(193, 238, 13);
-    --color-complementario: rgb(238, 58, 13);
+    --color-primario: rgb(30, 144, 255);
+    --color-secundario: rgb(199, 21, 133);
+    --color-terciario: rgb(144, 238, 144);
+    --color-complementario: rgb(255, 69, 0);
     --blanco: #ffffff;
     --negro: #000000;
     --outlines: rgb(224, 228, 204);
