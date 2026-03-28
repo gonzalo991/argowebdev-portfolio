@@ -1,0 +1,1 @@
+:root{--bg-main: #0f172a;--bg-secondary: #111827;--primary: #2563eb;--text-main: #e5e7eb}body{background-color:var(--bg-main);color:var(--text-main)}.card:hover{transform:translateY(-5px);transition:.2s ease-in-out}
