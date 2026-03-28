@@ -1,45 +1,66 @@
 import { CardProps } from "../../interfaces/CardProps";
-import reciclarg from "../img/reciclarg.png";
 import vonhaus from "../img/vonhaus.png";
 import digitalMirage from '../img/digitalmirage.png';
 import pockyfai from '../img/PockyfaiSplash.png';
+import nfseek from '../img/nfseek.png'; 
 
-let reciclargString: string = reciclarg;
 let vonhausString: string = vonhaus;
-
 let digitalMirageString: string = digitalMirage;
+let nfseekString: string = nfseek;
 
 export const projects: CardProps[] = [
     {
-        "title": "Reciclarg",
-        "description": "Página web dedicada a concientizar a la comunidad Mendocina sobre la importancia y los métodos existentes de reciclaje. Idea original del Equipo Los Chiperos para competir en el Hackathon 2022 apadrinados por la UTN - FR San Rafael de Mendoza.",
-        "imageUrl": reciclargString,
-        "githubLink": "https://github.com/gonzalo991/hackathon2022-reciclarg",
-        "githubLinkBackend": "https://github.com/gonzalo991/von-haus-backend",
-        "projectLink": "https://reciclarg.onrender.com/"
+        title: "NFSeek",
+        description: `
+• Production-ready platform (Next.js + Node.js)
+• Implemented secure authentication (JWT + refresh tokens, roles, reCAPTCHA)
+• Integrated Stripe payments, WooCommerce and GoAffPro coupon system
+• Refactored legacy monolithic codebase applying clean architecture principles
+• Optimized performance (caching, memoization, API reduction, pagination)
+• Improved load times and overall UX in real production environment
+        `,
+        imageUrl: nfseekString,
+        githubLink: "", 
+        githubLinkBackend: "",
+        projectLink: "https://nfseek.com" 
     },
     {
-        "title": "Von Haus Lola Mora",
-        "description": "Aplicación web creada para el criadero de perros pastor alemán Von Haus Lola Mora de la ciudad de El Tala - Salta. Su finalidad es promocionar y dar a conocer el criadero para que el cliente pueda tener más ventas a nivel local, nacional e internacional.",
-        "imageUrl": vonhausString,
-        "githubLink": "https://github.com/gonzalo991/von-haus-frontend",
-        "githubLinkBackend": "https://github.com/gonzalo991/von-haus-backend",
-        "projectLink": "https://www.vonhauslolamora.com.ar/"
+        title: "Von Haus Lola Mora",
+        description: `
+• Fullstack web application (React + Node.js)
+• Designed backend APIs for content management
+• Built admin dashboard for operational efficiency
+• Deployed to production for real business usage
+        `,
+        imageUrl: vonhausString,
+        githubLink: "https://github.com/gonzalo991/von-haus-frontend",
+        githubLinkBackend: "https://github.com/gonzalo991/von-haus-backend",
+        projectLink: "https://www.vonhauslolamora.com.ar/"
     },
     {
-        "title": "Digital Mirage E-Commerce",
-        "description": "Este es un proyecto academico realizado con mi equipo durante la carrera de Técnico Universitario en programación usando las tecnologias MERN.",
-        "imageUrl": digitalMirageString,
-        "githubLink": "https://github.com/gonzalo991/Digital-Mirage-Frontend",
-        "githubLinkBackend": "https://github.com/gonzalo991/Digital-Mirage-Backend",
-        "projectLink": "https://gonzalo991.github.io/Digital-Mirage-Frontend/"
+        title: "Digital Mirage E-Commerce",
+        description: `
+• Fullstack MERN e-commerce application
+• Implemented product management and cart system
+• Integrated frontend and backend workflows
+• Built as a team-based production simulation
+        `,
+        imageUrl: digitalMirageString,
+        githubLink: "https://github.com/gonzalo991/Digital-Mirage-Frontend",
+        githubLinkBackend: "https://github.com/gonzalo991/Digital-Mirage-Backend",
+        projectLink: "https://gonzalo991.github.io/Digital-Mirage-Frontend/"
     },
     {
-        "title": "Pockyfai",
-        "description": "Aplicación movil para el manejo de finanzas personales para control de gastos, ingresos y ahorros, la app cuenta con las funcionalidades necesarias para llevar el seguimiento de tu economía personal y mejorar tus ingresos,esta creada para dispositivos android, creada con expo y react-native.",
-        "imageUrl": pockyfai,
-        "githubLink": "",
-        "githubLinkBackend": "",
-        "projectLink": "https://play.google.com/store/apps/details?id=com.gonzalo991.pockyfai"
-    },
+        title: "Pockyfai Mobile App",
+        description: `
+• Mobile app for personal finance tracking
+• Built with React Native + Expo
+• Features: expenses, income, savings tracking
+• Published for real users on Android
+        `,
+        imageUrl: pockyfai,
+        githubLink: "",
+        githubLinkBackend: "",
+        projectLink: "https://play.google.com/store/apps/details?id=com.gonzalo991.pockyfai"
+    }
 ];

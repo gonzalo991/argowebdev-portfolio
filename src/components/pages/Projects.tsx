@@ -5,29 +5,32 @@ import "../../css/index.css";
 const Projects: React.FC = () => {
     return (
         <>
-            <h1 className="programming-titulo">Proyectos</h1>
+            <h2 className="title has-text-centered"
+                style={{
+                    color: "#60a5fa",
+                    letterSpacing: "0.5px"
+                }}
+            >
+                Selected Work
+            </h2>
 
-            <div className="proyectos-container">
-                {
-                    projects.map(project => {
+            <div style={{
+                width: "60px",
+                height: "2px",
+                background: "#3b82f6",
+                margin: "10px auto 0"
+            }} />
 
-                        const { title, description, imageUrl, githubLink, githubLinkBackend, projectLink }: {
-                            title: string;
-                            description: string;
-                            imageUrl: string;
-                            githubLink: string;
-                            githubLinkBackend: string;
-                            projectLink: string;
-                        } = project;
+            <p className="has-text-centered mt-3">
+                Production-ready applications with real-world usage and scalable architecture
+            </p>
 
-                        return (
-                            <Card title={title} description={description}
-                                imageUrl={imageUrl} githubLink={githubLink}
-                                githubLinkBackend={githubLinkBackend} projectLink={projectLink} />
-
-                        )
-                    })
-                }
+            <div className="columns is-multiline m-5">
+                {projects.map((project, idx) => (
+                    <div className="column is-6" key={idx}>
+                        <Card {...project} />
+                    </div>
+                ))}
             </div>
         </>
     )

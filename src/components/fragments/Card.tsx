@@ -1,59 +1,100 @@
 import { CardProps } from "../../interfaces/CardProps";
-import "../../css/card.css";
-import { GrGithub } from "react-icons/gr";
-import { GrLink } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { GrGithub, GrLink } from "react-icons/gr";
 
-
-const Card: React.FC<CardProps> = (props) => {
-    const { title, description, imageUrl, githubLink, githubLinkBackend, projectLink } = props;
-
+const Card: React.FC<CardProps> = ({
+    title,
+    description,
+    imageUrl,
+    githubLink,
+    githubLinkBackend,
+    projectLink
+}) => {
     return (
-        <div className="card tarjeta">
-            <div className="card-image mb-5">
-                <figure className="image">
-                    <img className="card-img" src={imageUrl} alt="Placeholder image" />
-                </figure>   
+        <div
+            className="card"
+            style={{
+                backgroundColor: "#111827",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between"
+            }}
+        >
+            {/* IMAGE */}
+            <div className="card-image">
+                <figure className="image is-4by3">
+                    <img src={imageUrl} alt={title} />
+                </figure>
             </div>
-            <div className="card-content">
-                <div className="media">
-                    <div className="media-content">
-                        <p className="title is-4">{title}</p>
-                    </div>
-                </div>
 
-                <div className="content">
+            {/* CONTENT */}
+            <div className="card-content">
+                <p
+                    className="title is-5"
+                    style={{ color: "#f9fafb" }}
+                >
+                    {title}
+                </p>
+
+                <div
+                    className="content"
+                    style={{
+                        color: "#d1d5db",
+                        whiteSpace: "pre-line",
+                        fontSize: "0.95rem"
+                    }}
+                >
                     {description}
                 </div>
             </div>
-            {(githubLink || projectLink) && (
-                <footer className="card-footer">
-                    {githubLink && (
-                        <p className="card-footer-item">
-                            <span>
-                                <p className="icon-titulo">Front</p>
-                                <Link target="_blank" className="github-boton" to={githubLink}><GrGithub className="github-boton-icon" /></Link>
-                            </span>
-                        </p>
-                    )}
-                    {githubLinkBackend && (
-                        <p className="card-footer-item">
-                            <span>
-                                <p className="icon-titulo">Back</p>
-                                <Link target="_blank" className="github-boton" to={githubLinkBackend}><GrGithub className="github-boton-icon" /></Link>
-                            </span>
-                        </p>
-                    )}
-                    {projectLink && (
-                        <p className="card-footer-item">
-                            <span>
-                                <p className="icon-titulo">Link</p>
-                                <Link target="_blank" className="github-boton" to={projectLink}><GrLink className="github-boton-icon" /></Link>
-                            </span>
-                        </p>
-                    )}
-                </footer>
-            )}
+
+            {/* FOOTER */}
+            <footer className="card-footer">
+                {githubLink && (
+                    <a
+                        href={githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-footer-item"
+                        style={{ color: "#38bdf8" }}
+                    >
+                        <span className="icon mr-2">
+                            <GrGithub />
+                        </span>
+                        Front
+                    </a>
+                )}
+
+                {githubLinkBackend && (
+                    <a
+                        href={githubLinkBackend}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-footer-item"
+                        style={{ color: "#38bdf8" }}
+                    >
+                        <span className="icon mr-2">
+                            <GrGithub />
+                        </span>
+                        Back
+                    </a>
+                )}
+
+                {projectLink && (
+                    <a
+                        href={projectLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="card-footer-item"
+                        style={{ color: "#22c55e" }}
+                    >
+                        <span className="icon mr-2">
+                            <GrLink />
+                        </span>
+                        Live
+                    </a>
+                )}
+            </footer>
         </div>
     );
 };

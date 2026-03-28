@@ -1,72 +1,87 @@
-import { Link } from "react-router-dom";
-import '../../css/navbar.css';
 import { useState } from "react";
 
 const Navbar: React.FC = () => {
-    const [isActiveLink, setIsActiveLink] = useState<string>("Inicio");
+    const [isActive, setIsActive] = useState(false);
 
-    const handleActiveLink = (linkName: string): void => {
-        setIsActiveLink(linkName);
+    const scrollToSection = (id: string) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            setIsActive(false);
+        }
     };
 
     return (
-        <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div className="container-fluid">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mx-auto justify-content-center text-center">
-                        <li className="nav-item">
-                            <Link
-                                to="#developer" // Cambié "to" por "#developer"
-                                className={`navbar-item ${isActiveLink === "Inicio" ? "active" : ""} text-white`}
-                                onClick={() => {
-                                    handleActiveLink("Inicio");
-                                    window.scrollTo({ top: document.getElementById("developer")?.offsetTop, behavior: 'smooth' }); // Desplazar a la sección "developer"
-                                }}
-                            >
-                                Inicio
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                to="#habilidades" // Cambié "to" por "#habilidades"
-                                className={`navbar-item ${isActiveLink === "Certificaciones" ? "active" : ""} text-white`}
-                                onClick={() => {
-                                    handleActiveLink("Certificaciones");
-                                    window.scrollTo({ top: document.getElementById("habilidades")?.offsetTop, behavior: 'smooth' }); // Desplazar a la sección "habilidades"
-                                }}
-                            >
-                                Certificaciones
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                to="#experiencia" // Cambié "to" por "#experiencia"
-                                className={`navbar-item ${isActiveLink === "Experiencia" ? "active" : ""} text-white`}
-                                onClick={() => {
-                                    handleActiveLink("Experiencia");
-                                    window.scrollTo({ top: document.getElementById("experiencia")?.offsetTop, behavior: 'smooth' }); // Desplazar a la sección "experiencia"
-                                }}
-                            >
-                                Experiencia
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link
-                                to="#proyectos" // Cambié "to" por "#proyectos"
-                                className={`navbar-item ${isActiveLink === "Proyectos" ? "active" : ""} text-white`}
-                                onClick={() => {
-                                    handleActiveLink("Proyectos");
-                                    window.scrollTo({ top: document.getElementById("proyectos")?.offsetTop, behavior: 'smooth' }); // Desplazar a la sección "proyectos"
-                                }}
-                            >
-                                Proyectos
-                            </Link>
-                        </li>
-                    </ul>
+        <nav
+            className="navbar is-fixed-top"
+            style={{
+                backgroundColor: "#0f172a",
+                borderBottom: "1px solid rgba(255,255,255,0.05)"
+            }}
+        >
+            <div className="container">
+
+                {/* BRAND */}
+                <div className="navbar-brand">
+                    <a
+                        className="navbar-item has-text-weight-semibold"
+                        style={{ color: "#f9fafb" }}
+                    >
+                        Gonzalo Araya
+                    </a>
+
+                    {/* BURGER */}
+                    <a
+                        role="button"
+                        className={`navbar-burger ${isActive ? "is-active" : ""}`}
+                        onClick={() => setIsActive(!isActive)}
+                        style={{ color: "#f9fafb" }}
+                    >
+                        <span />
+                        <span />
+                        <span />
+                    </a>
                 </div>
+
+                {/* MENU */}
+                <div
+                    className={`navbar-menu ${isActive ? "is-active" : ""}`}
+                    style={{
+                        backgroundColor: "#0f172a" // 🔥 clave para mobile
+                    }}
+                >
+                    <div className="navbar-end">
+
+                        {[
+                            { label: "About", id: "developer" },
+                            { label: "Skills", id: "habilidades" },
+                            { label: "Experience", id: "experiencia" },
+                            { label: "Projects", id: "proyectos" },
+                            { label: "Education", id: "formacion" }
+                        ].map((item) => (
+                            <a
+                                key={item.id}
+                                className="navbar-item"
+                                onClick={() => scrollToSection(item.id)}
+                                style={{
+                                    color: "#d1d5db",
+                                    transition: "all 0.2s ease",
+                                    textAlign: "center"
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.color = "#38bdf8";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.color = "#d1d5db";
+                                }}
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+
+                    </div>
+                </div>
+
             </div>
         </nav>
     );

@@ -1,39 +1,77 @@
 import { experiencia } from "../data/experience";
-import "../../css/experiencia.css";
 
 const Experience: React.FC = () => {
     return (
-        <>
-            <hr className="linea mt-5 mb-2" />
+        <div className="container">
+            <h2
+                className="title has-text-centered"
+                style={{
+                    color: "#60a5fa",
+                    letterSpacing: "0.5px"
+                }}
+            >
+                Experience
+            </h2>
 
-            <h3 className="experiencia-titulo text-center mt-5 mb-5">Experiencia Laboral</h3>
-            <div className="container-exp">
-                {
-                    experiencia.map((exp, idx) => {
-                        const { empresa, puesto, fechaInicio, fechaFin, descripcion }: {
-                            empresa: string;
-                            puesto: string;
-                            fechaInicio: string;
-                            fechaFin: string;
-                            descripcion: string;
-                        } = exp;
+            <div style={{
+                width: "60px",
+                height: "2px",
+                background: "#3b82f6",
+                margin: "10px auto 0"
+            }} />
 
-                        return (
+            <div className="columns is-centered mt-6">
+                <div className="column is-8">
 
-                            <div className="experiencia-contenedor mt-3 mb-4 ms-4 me-4 text-center" key={idx}>
-                                <h4 className="experiencia-texto mt-3 mb-3"><span>Empresa:</span> {empresa}</h4>
-                                <p className="experiencia-texto"><span>Puesto:</span> {puesto}</p>
-                                <p className="experiencia-texto"><span>Fecha Inicio:</span> {fechaInicio}</p>
-                                <p className="experiencia-texto"><span>Fecha Fin:</span> {fechaFin}</p>
-                                <p className="experiencia-texto"><span>Descripcion:</span> {descripcion}</p>
-                                <hr className="linea mt-5 mb-2" />
+                    {experiencia.map((exp, idx) => (
+                        <div
+                            className="box mb-5 has-text-centered"
+                            style={{
+                                backgroundColor: "#111827",
+                                borderLeft: "3px solid #3b82f6"
+                            }}
+                            key={idx}
+                        >
+                            <h3
+                                className="title is-5"
+                                style={{ color: "#f9fafb" }}
+                            >
+                                {exp.puesto}
+                            </h3>
+
+                            <p
+                                style={{
+                                    color: "#3b82f6",
+                                    fontWeight: 600
+                                }}
+                            >
+                                {exp.empresa}
+                            </p>
+
+                            <p
+                                className="is-size-7 mb-3"
+                                style={{ color: "#9ca3af" }}
+                            >
+                                {exp.fechaInicio} - {exp.fechaFin}
+                            </p>
+
+                            <div
+                                style={{
+                                    whiteSpace: "pre-line",
+                                    maxWidth: "600px",
+                                    margin: "0 auto",
+                                    color: "#d1d5db"
+                                }}
+                            >
+                                {exp.descripcion}
                             </div>
-                        )
-                    })
-                }
+                        </div>
+                    ))}
+
+                </div>
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
 export default Experience;

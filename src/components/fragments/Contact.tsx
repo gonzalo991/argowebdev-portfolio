@@ -1,8 +1,4 @@
-import { GrGithub, GrLinkedin } from "react-icons/gr";
-import { IoIosMail } from "react-icons/io";
-import { Link } from "react-router-dom";
 import "../../css/index.css";
-import "../../css/keyframes.css";
 
 const Contact: React.FC = () => {
     const correo = 'gonxaraya991@gmail.com';
@@ -15,23 +11,18 @@ const Contact: React.FC = () => {
 
     return (
         <>
-            <div className="secciones-contacto">
-                <div className="seccion-email">
-                    <p className="email"><IoIosMail className="email-icon" /> <span>Email:</span> gonxaraya991@gmail.com</p>
+            <div className="buttons is-centered mt-4">
+                <a className="button is-primary" onClick={handleRedactarCorreo}>
+                    Contact Me
+                </a>
 
-                    <button className="email-boton" onClick={handleRedactarCorreo}>Redactar correo</button>
-                </div>
+                <a href="https://github.com/gonzalo991" target="_blank" className="button is-light">
+                    GitHub
+                </a>
 
-                <div className="seccion-social">
-                    <Link to="https://github.com/gonzalo991" className="github-contacto" target="_blank">
-                        <GrGithub className="github-contacto-icon" />
-                    </Link>
-
-                    <Link to="https://www.linkedin.com/in/gonzalo-araya-416a6520b/"
-                        className="linkedin-contacto" target="_blank">
-                        <GrLinkedin className="linkedin-contacto-icon" />
-                    </Link>
-                </div>
+                <a href="https://linkedin.com/in/gonzalo-araya-416a6520b/" target="_blank" className="button is-light">
+                    LinkedIn
+                </a>
             </div>
         </>
     )

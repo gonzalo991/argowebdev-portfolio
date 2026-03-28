@@ -4,18 +4,17 @@ import Developer from "../fragments/Developer";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Formation from "./Formation";
-import "../../css/developer.css";
 
 const Home: React.FC = () => {
 
     return (
         <>
 
-            <div id="developer" className="presentacion is-flex is-justify-content-center" style={{ margin: "2em 0 0 0" }}>
+            <div id="developer" className="is-flex is-justify-content-center" style={{ margin: "2em 0 0 0" }}>
                 < Developer />
             </div>
 
-            <div className="habilidades mt-5" id="habilidades">
+            <div className="mt-5" id="habilidades">
                 <Abilities />
             </div>
 
@@ -27,7 +26,7 @@ const Home: React.FC = () => {
                 <Experience />
             </div>
 
-            <div id="formacion" className="mt-5">
+            <div id="formacion">
                 <Formation />
             </div>
 

@@ -1,36 +1,45 @@
-import "../../css/experiencia.css";
 import { certificados } from "../data/certifications";
 
 const Formation: React.FC = () => {
     return (
-        <>
-            <h3 className="experiencia-titulo text-center mt-5 mb-5">Formación y Certificaciones</h3>
+        <div className="container">
+            <h2 className="title has-text-centered mt-5" style={{ color: "#60a5fa" }}>Education & Certifications</h2>
+          
+            <div style={{
+                width: "60px",
+                height: "2px",
+                background: "#3b82f6",
+                margin: "10px auto 0"
+            }} />
 
-            <div className="container-exp">
-                {
-                    certificados.map((cert, idx) => {
-                        const { institucion, titulo, fechaInicio, fechaFin }: {
-                            institucion: string;
-                            titulo: string;
-                            fechaInicio: string;
-                            fechaFin: string;
-                        } = cert;
+            <div className="columns is-centered mt-5">
+                <div className="column is-8">
 
-                        return (
-                            <div className="experiencia-contenedor mt-3 mb-4 ms-4 me-4 text-center" key={idx}>
-                                <h4 className="experiencia-texto mt-3 mb-3"><span>Institución:</span> {institucion}</h4>
-                                <p className="experiencia-texto"><span>Título:</span> {titulo}</p>
-                                <p className="experiencia-texto"><span>Fecha Inicio:</span> {fechaInicio}</p>
-                                <p className="experiencia-texto"><span>Fecha Fin:</span> {fechaFin}</p>
-                                <hr className="linea mt-5 mb-3" />
-                            </div>
-                        )
-                    })
-                }
+                    {certificados.map((cert, idx) => (
+                        <div
+                            className="box mb-4 has-text-centered"
+                            style={{ backgroundColor: "#111827" }}
+                            key={idx}>
+
+                            <p className="title is-6" style={{ color: "#f9fafb" }}>
+                                {cert.titulo}
+                            </p>
+
+                            <p className="subtitle is-6" style={{ color: "#d1d5db" }}>
+                                {cert.institucion}
+                            </p>
+
+                            <p className="is-size-7" style={{ color: "#9ca3af" }}>
+                                {cert.fechaInicio} - {cert.fechaFin}
+                            </p>
+
+                        </div>
+                    ))}
+
+                </div>
             </div>
-
-        </>
-    )
-}
+        </div>
+    );
+};
 
 export default Formation;
