@@ -33,7 +33,7 @@ export const projects: CardProps[] = [
         imageUrl: vonhausString,
         githubLink: "https://github.com/gonzalo991/von-haus-frontend",
         githubLinkBackend: "https://github.com/gonzalo991/von-haus-backend",
-        projectLink: "https://www.vonhauslolamora.com.ar/"
+        projectLink: "https://vonhauslolamora.vercel.app/"
     },
     {
         title: "Digital Mirage E-Commerce",
