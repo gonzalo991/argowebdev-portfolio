@@ -14,38 +14,27 @@ const Developer: React.FC = () => {
                     <div className="columns is-vcentered is-variable is-8">
 
                         {/* TEXTO */}
-                        <div className="column is-6-desktop is-12-mobile has-text-centered-mobile">
+                        <div className="column mt-3 is-6-desktop is-12-mobile has-text-centered-mobile">
 
-                            <h1 className="title is-2-mobile is-1-desktop mt-5" style={{ color: "#f9fafb" }}>
-                                Fullstack Engineer
+                            <h1 className="title is-2-mobile is-1-desktop" style={{ color: "#f9fafb" }}>
+                                Backend Engineer
                             </h1>
 
                             <h2
                                 className="subtitle mt-4 is-5-mobile is-4-desktop"
-                                style={{
-                                    color: "#d1d5db",
-                                    maxWidth: "520px",
-                                    margin: "0 auto"
-                                }}
+                                style={{ color: "#d1d5db", maxWidth: "520px", margin: "0 auto" }}
                             >
-                                Building scalable production systems with{" "}
-                                <strong style={{ color: "#38bdf8" }}>
-                                    React, Next.js and Node.js
-                                </strong>
+                                I build APIs and backend systems that solve real business problems
+                                and improve performance in production environments
                             </h2>
 
                             <p
                                 className="mt-4"
-                                style={{
-                                    color: "#9ca3af",
-                                    maxWidth: "520px",
-                                    margin: "0 auto"
-                                }}
+                                style={{ color: "#9ca3af", maxWidth: "520px", margin: "0 auto" }}
                             >
-                                Focused on clean architecture, performance optimization
-                                and delivering real-world applications used in production.
+                                Experience in authentication, payments, performance optimization and
+                                refactoring legacy systems with measurable impact (↓ latency, ↑ stability).
                             </p>
-
 
                             {/* BOTONES */}
                             <div className="buttons mt-5 is-centered is-justify-content-flex-start-desktop">

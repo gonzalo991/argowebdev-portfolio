@@ -4,12 +4,14 @@ import NotFound from './components/pages/NotFound';
 import Formation from './components/pages/Formation';
 import Projects from './components/pages/Projects';
 import Experience from './components/pages/Experience';
+import About from './components/pages/About';
 
 const Router: React.FC = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/certificaciones" element={<Formation />} />
+            <Route path="/about" element={<About />} />
             <Route path='/proyectos' element={<Projects />} />
             <Route path='/experiencia' element={<Experience />} />
             <Route path="*" element={<NotFound />} />

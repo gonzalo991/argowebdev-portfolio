@@ -2,43 +2,97 @@ import { certificados } from "../data/certifications";
 
 const Formation: React.FC = () => {
     return (
-        <div className="container">
-            <h2 className="title has-text-centered mt-5" style={{ color: "#60a5fa" }}>Education & Certifications</h2>
-          
-            <div style={{
-                width: "60px",
-                height: "2px",
-                background: "#3b82f6",
-                margin: "10px auto 0"
-            }} />
+        <section className="section" style={{ paddingTop: "2rem" }}>
+            <div className="container">
 
-            <div className="columns is-centered mt-5">
-                <div className="column is-8">
+                {/* HEADER */}
+                <div className="has-text-centered mb-5">
+                    <h2
+                        className="title is-4"
+                        style={{ color: "#38bdf8", marginBottom: "0.5rem" }}
+                    >
+                        Education & Certifications
+                    </h2>
 
+                    <div
+                        style={{
+                            width: "50px",
+                            height: "2px",
+                            background: "#38bdf8",
+                            margin: "0.5rem auto"
+                        }}
+                    />
+                </div>
+
+                {/* LIST */}
+                <div
+                    style={{
+                        maxWidth: "700px",
+                        margin: "0 auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "0.6rem"
+                    }}
+                >
                     {certificados.map((cert, idx) => (
                         <div
-                            className="box mb-4 has-text-centered"
-                            style={{ backgroundColor: "#111827" }}
-                            key={idx}>
+                            key={idx}
+                            style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                                alignItems: "center",
+                                padding: "0.6rem 0.8rem",
+                                borderRadius: "8px",
+                                backgroundColor: "#0f172a", // 🔥 fondo sutil
+                                border: "1px solid rgba(255,255,255,0.04)",
+                                transition: "all 0.2s ease"
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.borderColor = "rgba(56,189,248,0.3)";
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.borderColor = "rgba(255,255,255,0.04)";
+                            }}
+                        >
+                            {/* LEFT */}
+                            <div>
+                                <p
+                                    style={{
+                                        color: "#f9fafb",
+                                        fontSize: "0.9rem",
+                                        fontWeight: 500,
+                                        marginBottom: "0.1rem"
+                                    }}
+                                >
+                                    {cert.titulo}
+                                </p>
 
-                            <p className="title is-6" style={{ color: "#f9fafb" }}>
-                                {cert.titulo}
+                                <p
+                                    style={{
+                                        color: "#9ca3af",
+                                        fontSize: "0.8rem"
+                                    }}
+                                >
+                                    {cert.institucion}
+                                </p>
+                            </div>
+
+                            {/* RIGHT */}
+                            <p
+                                style={{
+                                    color: "#6b7280",
+                                    fontSize: "0.75rem",
+                                    whiteSpace: "nowrap"
+                                }}
+                            >
+                                {cert.fechaInicio} — {cert.fechaFin}
                             </p>
-
-                            <p className="subtitle is-6" style={{ color: "#d1d5db" }}>
-                                {cert.institucion}
-                            </p>
-
-                            <p className="is-size-7" style={{ color: "#9ca3af" }}>
-                                {cert.fechaInicio} - {cert.fechaFin}
-                            </p>
-
                         </div>
                     ))}
-
                 </div>
+
             </div>
-        </div>
+        </section>
     );
 };
 

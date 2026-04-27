@@ -2,75 +2,147 @@ import { experiencia } from "../data/experience";
 
 const Experience: React.FC = () => {
     return (
-        <div className="container">
-            <h2
-                className="title has-text-centered"
-                style={{
-                    color: "#60a5fa",
-                    letterSpacing: "0.5px"
-                }}
-            >
-                Experience
-            </h2>
+        <section className="section">
+            <div className="container" style={{ maxWidth: "900px" }}>
 
-            <div style={{
-                width: "60px",
-                height: "2px",
-                background: "#3b82f6",
-                margin: "10px auto 0"
-            }} />
+                {/* HEADER */}
+                <div className="has-text-centered mb-6">
+                    <h2 className="title is-3" style={{ color: "#38bdf8" }}>
+                        Experience
+                    </h2>
 
-            <div className="columns is-centered mt-6">
-                <div className="column is-8">
+                    <p
+                        className="is-size-6 mt-2"
+                        style={{
+                            color: "#9ca3af",
+                            maxWidth: "500px",
+                            margin: "0 auto"
+                        }}
+                    >
+                        Building and improving real-world systems in production
+                    </p>
+                </div>
+
+                {/* TIMELINE */}
+                <div style={{ position: "relative", paddingLeft: "20px" }}>
+
+                    {/* vertical line */}
+                    <div
+                        style={{
+                            position: "absolute",
+                            left: "6px",
+                            top: 0,
+                            bottom: 0,
+                            width: "2px",
+                            background: "rgba(255,255,255,0.08)"
+                        }}
+                    />
 
                     {experiencia.map((exp, idx) => (
                         <div
-                            className="box mb-5 has-text-centered"
-                            style={{
-                                backgroundColor: "#111827",
-                                borderLeft: "3px solid #3b82f6"
-                            }}
                             key={idx}
+                            style={{
+                                position: "relative",
+                                marginBottom: "1.8rem"
+                            }}
                         >
-                            <h3
-                                className="title is-5"
-                                style={{ color: "#f9fafb" }}
-                            >
-                                {exp.puesto}
-                            </h3>
 
-                            <p
-                                style={{
-                                    color: "#3b82f6",
-                                    fontWeight: 600
-                                }}
-                            >
-                                {exp.empresa}
-                            </p>
-
-                            <p
-                                className="is-size-7 mb-3"
-                                style={{ color: "#9ca3af" }}
-                            >
-                                {exp.fechaInicio} - {exp.fechaFin}
-                            </p>
-
+                            {/* dot */}
                             <div
                                 style={{
-                                    whiteSpace: "pre-line",
-                                    maxWidth: "600px",
-                                    margin: "0 auto",
-                                    color: "#d1d5db"
+                                    position: "absolute",
+                                    left: "-2px",
+                                    top: "6px",
+                                    width: "10px",
+                                    height: "10px",
+                                    borderRadius: "50%",
+                                    backgroundColor: "#38bdf8"
+                                }}
+                            />
+
+                            {/* CONTENT BOX */}
+                            <div
+                                style={{
+                                    backgroundColor: "#111827",
+                                    padding: "1rem 1.2rem",
+                                    borderRadius: "8px",
+                                    border: "1px solid rgba(255,255,255,0.05)"
                                 }}
                             >
-                                {exp.descripcion}
+
+                                {/* TOP ROW */}
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        flexWrap: "wrap",
+                                        gap: "6px"
+                                    }}
+                                >
+                                    <h3
+                                        style={{
+                                            color: "#f9fafb",
+                                            fontWeight: 600,
+                                            fontSize: "1rem"
+                                        }}
+                                    >
+                                        {exp.puesto}
+                                    </h3>
+
+                                    <span
+                                        style={{
+                                            color: "#9ca3af",
+                                            fontSize: "0.8rem"
+                                        }}
+                                    >
+                                        {exp.fechaInicio} – {exp.fechaFin}
+                                    </span>
+                                </div>
+
+                                {/* COMPANY */}
+                                <p
+                                    style={{
+                                        color: "#38bdf8",
+                                        fontSize: "0.9rem",
+                                        marginBottom: "0.5rem"
+                                    }}
+                                >
+                                    {exp.empresa}
+                                </p>
+
+                                {/* DESCRIPTION */}
+                                <ul
+                                    style={{
+                                        color: "#d1d5db",
+                                        paddingLeft: "1rem",
+                                        margin: 0
+                                    }}
+                                >
+                                    {exp.descripcion
+                                        .trim()
+                                        .split("\n")
+                                        .filter(line => line.trim() !== "")
+                                        .map((line, i) => (
+                                            <li
+                                                key={i}
+                                                style={{
+                                                    marginBottom: "0.3rem",
+                                                    fontSize: "0.9rem"
+                                                }}
+                                            >
+                                                {line.replace("•", "").trim()}
+                                            </li>
+                                        ))}
+                                </ul>
+
                             </div>
                         </div>
                     ))}
 
                 </div>
+
             </div>
-        </div>
+        </section>
     );
 };
 

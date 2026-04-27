@@ -1,39 +1,76 @@
+import "../../css/index.css";
 import Card from "../fragments/Card";
 import { projects } from "../data/projects";
-import "../../css/index.css";
 
 const Projects: React.FC = () => {
     return (
-        <>
-            <h2 className="title has-text-centered"
-                style={{
-                    color: "#60a5fa",
-                    letterSpacing: "0.5px"
-                }}
-            >
-                Selected Work
-            </h2>
+        <section className="section" style={{ paddingTop: "2rem" }}>
+            <div className="container">
 
-            <div style={{
-                width: "60px",
-                height: "2px",
-                background: "#3b82f6",
-                margin: "10px auto 0"
-            }} />
+                {/* HEADER */}
+                <div className="has-text-centered mb-5">
+                    <h2
+                        className="title is-3"
+                        style={{
+                            color: "#38bdf8",
+                            marginBottom: "0.5rem"
+                        }}
+                    >
+                        Selected Work
+                    </h2>
 
-            <p className="has-text-centered mt-3">
-                Production-ready applications with real-world usage and scalable architecture
-            </p>
+                    <div
+                        style={{
+                            width: "50px",
+                            height: "2px",
+                            background: "#38bdf8",
+                            margin: "0.5rem auto"
+                        }}
+                    />
 
-            <div className="columns is-multiline m-5">
-                {projects.map((project, idx) => (
-                    <div className="column is-6" key={idx}>
-                        <Card {...project} />
-                    </div>
-                ))}
+                    <p
+                        style={{
+                            color: "#9ca3af",
+                            maxWidth: "520px",
+                            margin: "0.75rem auto 0",
+                            fontSize: "0.95rem"
+                        }}
+                    >
+                        Backend-focused systems built for real production use,
+                        optimized for performance, scalability and business impact.
+                    </p>
+                </div>
+
+                {/* GRID DESKTOP / SLIDER MOBILE */}
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                        gap: "1.25rem",
+                        alignItems: "stretch"
+                    }}
+                >
+                    {projects.map((project, idx) => (
+                        <div
+                            key={idx}
+                            style={{
+                                transition: "transform 0.2s ease"
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.transform = "translateY(-4px)";
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = "translateY(0)";
+                            }}
+                        >
+                            <Card {...project} />
+                        </div>
+                    ))}
+                </div>
+
             </div>
-        </>
-    )
-}
+        </section>
+    );
+};
 
 export default Projects;

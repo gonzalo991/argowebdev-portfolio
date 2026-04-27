@@ -5,8 +5,16 @@ const Navbar: React.FC = () => {
 
     const scrollToSection = (id: string) => {
         const el = document.getElementById(id);
+
         if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
+            const navbarHeight = 80;
+            const y = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+            window.scrollTo({
+                top: y,
+                behavior: "smooth"
+            });
+
             setIsActive(false);
         }
     };
@@ -30,7 +38,6 @@ const Navbar: React.FC = () => {
                         Gonzalo Araya
                     </a>
 
-                    {/* BURGER */}
                     <a
                         role="button"
                         className={`navbar-burger ${isActive ? "is-active" : ""}`}
@@ -47,16 +54,17 @@ const Navbar: React.FC = () => {
                 <div
                     className={`navbar-menu ${isActive ? "is-active" : ""}`}
                     style={{
-                        backgroundColor: "#0f172a" // 🔥 clave para mobile
+                        backgroundColor: "#0f172a",
+                        textAlign: "center"
                     }}
                 >
                     <div className="navbar-end">
 
                         {[
                             { label: "About", id: "developer" },
-                            { label: "Skills", id: "habilidades" },
-                            { label: "Experience", id: "experiencia" },
                             { label: "Projects", id: "proyectos" },
+                            { label: "Experience", id: "experiencia" },
+                            { label: "Skills", id: "habilidades" },
                             { label: "Education", id: "formacion" }
                         ].map((item) => (
                             <a
@@ -65,8 +73,7 @@ const Navbar: React.FC = () => {
                                 onClick={() => scrollToSection(item.id)}
                                 style={{
                                     color: "#d1d5db",
-                                    transition: "all 0.2s ease",
-                                    textAlign: "center"
+                                    fontSize: "0.95rem"
                                 }}
                                 onMouseEnter={(e) => {
                                     e.currentTarget.style.color = "#38bdf8";

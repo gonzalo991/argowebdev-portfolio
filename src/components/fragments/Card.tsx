@@ -14,34 +14,61 @@ const Card: React.FC<CardProps> = ({
             className="card"
             style={{
                 backgroundColor: "#111827",
-                height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-between"
+                height: "100%",
+                borderRadius: "10px",
+                overflow: "hidden",
+                border: "1px solid rgba(255,255,255,0.05)",
+                transition: "all 0.2s ease"
             }}
         >
             {/* IMAGE */}
             <div className="card-image">
                 <figure className="image is-4by3">
-                    <img src={imageUrl} alt={title} />
+                    <img
+                        src={imageUrl}
+                        alt={title}
+                        style={{
+                            objectFit: "cover",
+                            height: "100%",
+                            width: "100%"
+                        }}
+                    />
                 </figure>
             </div>
 
             {/* CONTENT */}
-            <div className="card-content">
+            <div
+                className="card-content"
+                style={{
+                    padding: "0.9rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.5rem",
+                    flexGrow: 1  
+                }}
+            >
+                {/* TITLE */}
                 <p
-                    className="title is-5"
-                    style={{ color: "#f9fafb" }}
+                    className="title is-6"
+                    style={{
+                        color: "#f9fafb",
+                        marginBottom: "0.25rem"
+                    }}
                 >
                     {title}
                 </p>
 
+                {/* DESCRIPTION */}
                 <div
-                    className="content"
                     style={{
                         color: "#d1d5db",
+                        fontSize: "0.85rem",
+                        lineHeight: "1.4",
                         whiteSpace: "pre-line",
-                        fontSize: "0.95rem"
+                        maxHeight: "120px",
+                        overflow: "hidden"
                     }}
                 >
                     {description}
@@ -49,19 +76,27 @@ const Card: React.FC<CardProps> = ({
             </div>
 
             {/* FOOTER */}
-            <footer className="card-footer">
+            <footer
+                className="card-footer"
+                style={{
+                    borderTop: "1px solid rgba(255,255,255,0.05)"
+                }}
+            >
                 {githubLink && (
                     <a
                         href={githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="card-footer-item"
-                        style={{ color: "#38bdf8" }}
+                        style={{
+                            color: "#38bdf8",
+                            fontSize: "0.85rem"
+                        }}
                     >
-                        <span className="icon mr-2">
+                        <span className="icon mr-1">
                             <GrGithub />
                         </span>
-                        Front
+                        Code
                     </a>
                 )}
 
@@ -71,12 +106,15 @@ const Card: React.FC<CardProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="card-footer-item"
-                        style={{ color: "#38bdf8" }}
+                        style={{
+                            color: "#38bdf8",
+                            fontSize: "0.85rem"
+                        }}
                     >
-                        <span className="icon mr-2">
+                        <span className="icon mr-1">
                             <GrGithub />
                         </span>
-                        Back
+                        API
                     </a>
                 )}
 
@@ -86,9 +124,12 @@ const Card: React.FC<CardProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="card-footer-item"
-                        style={{ color: "#22c55e" }}
+                        style={{
+                            color: "#22c55e",
+                            fontSize: "0.85rem"
+                        }}
                     >
-                        <span className="icon mr-2">
+                        <span className="icon mr-1">
                             <GrLink />
                         </span>
                         Live

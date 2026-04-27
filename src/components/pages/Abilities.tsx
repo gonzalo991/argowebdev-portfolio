@@ -1,145 +1,108 @@
 const Abilities: React.FC = () => {
+    const sections = [
+        {
+            title: "Backend",
+            items: ["Node.js", "NestJS", "Express"],
+            highlight: true
+        },
+        {
+            title: "Frontend",
+            items: ["React", "Next.js"]
+        },
+        {
+            title: "Databases",
+            items: ["PostgreSQL", "MongoDB"]
+        },
+        {
+            title: "DevOps",
+            items: ["Docker", "CI/CD", "GCP"]
+        }
+    ];
+
     return (
         <section className="section">
-            <div className="container">
+            <div className="container" style={{ maxWidth: "800px" }}>
 
                 {/* HEADER */}
-                <div className="has-text-centered mb-6">
-                    <h2
-                        className="title is-3"
-                        style={{ color: "#38bdf8" }}
-                    >
-                        Technical Strengths
+                <div className="has-text-centered mb-5">
+                    <h2 className="title is-3" style={{ color: "#38bdf8" }}>
+                        Technical Stack
                     </h2>
 
-                    <div style={{
-                        width: "60px",
-                        height: "2px",
-                        background: "#3b82f6",
-                        margin: "10px auto 0"
-                    }} />
-
                     <p
-                        className="is-size-6 mt-3"
-                        style={{ color: "#9ca3af" }}
+                        className="is-size-6 mt-2"
+                        style={{
+                            color: "#9ca3af",
+                            maxWidth: "500px",
+                            margin: "0 auto"
+                        }}
                     >
-                        Core technologies and principles I use to build scalable,
-                        production-ready systems.
+                        Technologies I use to build and scale real-world applications
                     </p>
                 </div>
 
                 {/* GRID */}
-                <div className="columns is-multiline">
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+                        gap: "20px",
+                        justifyItems: "center"
+                    }}
+                >
 
-                    {/* FRONTEND */}
-                    <div className="column is-6">
+                    {sections.map((section, idx) => (
                         <div
-                            className="box"
+                            key={idx}
                             style={{
-                                backgroundColor: "#111827",
-                                height: "100%"
+                                textAlign: "center",
+                                width: "100%",
+                                maxWidth: "180px"
                             }}
                         >
-                            <h3
-                                className="title is-5"
-                                style={{ color: "#f9fafb" }}
+                            {/* TITLE */}
+                            <p
+                                style={{
+                                    color: section.highlight ? "#38bdf8" : "#f9fafb",
+                                    fontWeight: 600,
+                                    marginBottom: "8px",
+                                    fontSize: "0.9rem"
+                                }}
                             >
-                                Frontend
-                            </h3>
-
-                            <p style={{ color: "#38bdf8", fontWeight: 600 }}>
-                                React · Next.js · TypeScript
+                                {section.title}
                             </p>
 
-                            <p style={{ color: "#d1d5db" }}>
-                                Component-based architecture, scalable state
-                                management and performance optimization.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* BACKEND */}
-                    <div className="column is-6">
-                        <div
-                            className="box"
-                            style={{
-                                backgroundColor: "#111827",
-                                height: "100%"
-                            }}
-                        >
-                            <h3
-                                className="title is-5"
-                                style={{ color: "#f9fafb" }}
+                            {/* TAGS */}
+                            <div
+                                style={{
+                                    display: "flex",
+                                    flexWrap: "wrap",
+                                    justifyContent: "center",
+                                    gap: "6px",
+                                    minHeight: "24px"
+                                }}
                             >
-                                Backend
-                            </h3>
-
-                            <p style={{ color: "#38bdf8", fontWeight: 600 }}>
-                                Node.js · Express · NestJS
-                            </p>
-
-                            <p style={{ color: "#d1d5db" }}>
-                                REST APIs, authentication, modular architecture
-                                and scalable server-side systems.
-                            </p>
+                                {section.items.map((item, i) => (
+                                    <span
+                                        key={i}
+                                        style={{
+                                            backgroundColor: "#1f2937",
+                                            color: "#d1d5db",
+                                            border: "1px solid #374151",
+                                            fontSize: "0.75rem",
+                                            padding: "4px 8px",
+                                            borderRadius: "6px"
+                                        }}
+                                    >
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-
-                    {/* DATABASES */}
-                    <div className="column is-6">
-                        <div
-                            className="box"
-                            style={{
-                                backgroundColor: "#111827",
-                                height: "100%"
-                            }}
-                        >
-                            <h3
-                                className="title is-5"
-                                style={{ color: "#f9fafb" }}
-                            >
-                                Databases
-                            </h3>
-
-                            <p style={{ color: "#38bdf8", fontWeight: 600 }}>
-                                MongoDB · PostgreSQL
-                            </p>
-
-                            <p style={{ color: "#d1d5db" }}>
-                                Data modeling, indexing strategies and query
-                                optimization for high performance.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* DEVOPS */}
-                    <div className="column is-6">
-                        <div
-                            className="box"
-                            style={{
-                                backgroundColor: "#111827",
-                                height: "100%"
-                            }}
-                        >
-                            <h3
-                                className="title is-5"
-                                style={{ color: "#f9fafb" }}
-                            >
-                                DevOps & Tools
-                            </h3>
-
-                            <p style={{ color: "#38bdf8", fontWeight: 600 }}>
-                                Docker · Git · CI/CD
-                            </p>
-
-                            <p style={{ color: "#d1d5db" }}>
-                                Containerization, deployment pipelines and
-                                production environment management.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
 
                 </div>
+
             </div>
         </section>
     );
