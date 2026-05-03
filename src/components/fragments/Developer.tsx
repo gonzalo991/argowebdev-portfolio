@@ -64,31 +64,6 @@ const Developer: React.FC = () => {
                                     Download CV
                                 </a>
 
-                                {/* SECONDARY */}
-                                <a
-                                    href="#proyectos"
-                                    className="button is-medium is-fullwidth-mobile"
-                                    style={{
-                                        backgroundColor: "transparent",
-                                        color: "#f9fafb",
-                                        border: "1px solid #374151",
-                                        minWidth: "220px",
-                                        transition: "all 0.2s ease"
-                                    }}
-                                    onMouseEnter={(e) => {
-                                        e.currentTarget.style.borderColor = "#38bdf8";
-                                        e.currentTarget.style.color = "#38bdf8";
-                                        e.currentTarget.style.transform = "translateY(-2px)";
-                                    }}
-                                    onMouseLeave={(e) => {
-                                        e.currentTarget.style.borderColor = "#374151";
-                                        e.currentTarget.style.color = "#f9fafb";
-                                        e.currentTarget.style.transform = "translateY(0)";
-                                    }}
-                                >
-                                    View Projects
-                                </a>
-
                             </div>
 
 
