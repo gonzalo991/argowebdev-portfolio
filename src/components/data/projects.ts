@@ -45,6 +45,5 @@ export const projects: CardProps[] = [
         imageUrl: digitalMirageString,
         githubLink: "https://github.com/gonzalo991/Digital-Mirage-Frontend",
         githubLinkBackend: "https://github.com/gonzalo991/Digital-Mirage-Backend",
-        projectLink: "https://gonzalo991.github.io/Digital-Mirage-Frontend/"
     },
 ];
