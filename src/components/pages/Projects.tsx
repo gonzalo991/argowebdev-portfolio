@@ -31,13 +31,13 @@ const Projects: React.FC = () => {
                     <p
                         style={{
                             color: "#9ca3af",
-                            maxWidth: "520px",
+                            maxWidth: "540px",
                             margin: "0.75rem auto 0",
                             fontSize: "0.95rem"
                         }}
                     >
-                        Backend-focused systems built for real production use,
-                        optimized for performance, scalability and business impact.
+                        Production-grade applications and scalable systems built with modern web architectures,
+                        optimized for stability, performance, and real business impact.
                     </p>
                 </div>
 

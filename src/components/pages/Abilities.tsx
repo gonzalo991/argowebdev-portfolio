@@ -1,27 +1,35 @@
+import React from "react";
+
+interface TechCategory {
+    title: string;
+    items: string[];
+    highlight?: boolean;
+}
+
 const Abilities: React.FC = () => {
-    const sections = [
+    const sections: TechCategory[] = [
         {
             title: "Backend",
-            items: ["Node.js", "NestJS", "Express"],
+            items: ["Node.js", "NestJS", "Express", "REST APIs"],
             highlight: true
         },
         {
             title: "Frontend",
-            items: ["React", "Next.js"]
+            items: ["React", "Next.js", "TypeScript", "Tailwind"]
         },
         {
             title: "Databases",
             items: ["PostgreSQL", "MongoDB"]
         },
         {
-            title: "DevOps",
-            items: ["Docker", "CI/CD", "GCP"]
+            title: "DevOps & Cloud",
+            items: ["Docker", "CI/CD", "GCP", "Git"]
         }
     ];
 
     return (
         <section className="section">
-            <div className="container" style={{ maxWidth: "800px" }}>
+            <div className="container" style={{ maxWidth: "850px" }}>
 
                 {/* HEADER */}
                 <div className="has-text-centered mb-5">
@@ -45,19 +53,26 @@ const Abilities: React.FC = () => {
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-                        gap: "20px",
-                        justifyItems: "center"
+                        gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+                        gap: "16px",
+                        width: "100%"
                     }}
                 >
-
                     {sections.map((section, idx) => (
                         <div
                             key={idx}
                             style={{
+                                backgroundColor: "#111827",
+                                padding: "1.2rem 1rem",
+                                borderRadius: "10px",
+                                border: section.highlight
+                                    ? "1px solid rgba(56, 189, 248, 0.35)"
+                                    : "1px solid rgba(255, 255, 255, 0.05)",
                                 textAlign: "center",
-                                width: "100%",
-                                maxWidth: "180px"
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                transition: "all 0.2s ease"
                             }}
                         >
                             {/* TITLE */}
@@ -65,8 +80,9 @@ const Abilities: React.FC = () => {
                                 style={{
                                     color: section.highlight ? "#38bdf8" : "#f9fafb",
                                     fontWeight: 600,
-                                    marginBottom: "8px",
-                                    fontSize: "0.9rem"
+                                    marginBottom: "12px",
+                                    fontSize: "0.95rem",
+                                    letterSpacing: "0.01em"
                                 }}
                             >
                                 {section.title}
@@ -78,8 +94,7 @@ const Abilities: React.FC = () => {
                                     display: "flex",
                                     flexWrap: "wrap",
                                     justifyContent: "center",
-                                    gap: "6px",
-                                    minHeight: "24px"
+                                    gap: "6px"
                                 }}
                             >
                                 {section.items.map((item, i) => (
@@ -87,11 +102,12 @@ const Abilities: React.FC = () => {
                                         key={i}
                                         style={{
                                             backgroundColor: "#1f2937",
-                                            color: "#d1d5db",
-                                            border: "1px solid #374151",
-                                            fontSize: "0.75rem",
-                                            padding: "4px 8px",
-                                            borderRadius: "6px"
+                                            color: "#e5e7eb",
+                                            border: "1px solid rgba(255, 255, 255, 0.08)",
+                                            fontSize: "0.78rem",
+                                            padding: "4px 9px",
+                                            borderRadius: "6px",
+                                            lineHeight: "1.3"
                                         }}
                                     >
                                         {item}
@@ -100,7 +116,6 @@ const Abilities: React.FC = () => {
                             </div>
                         </div>
                     ))}
-
                 </div>
 
             </div>

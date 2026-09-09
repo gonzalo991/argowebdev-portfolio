@@ -11,11 +11,10 @@ export const projects: CardProps[] = [
     {
         title: "NFSeek",
         description: `
-           • Production-ready platform (Next.js + Node.js)
-           • JWT auth + RBAC + security layers  
-            • Payments & integrations (Stripe, WooCommerce)  
-            • Refactor → clean architecture  
-            • ↓ latency ~40%
+            • Production full-stack ecosystem (Next.js & NestJS/Node.js)
+            • Engineered end-to-end architecture with JWT auth, RBAC & SOC2 security practices
+            • Integrated payment systems (Stripe) and communications APIs (Vonage, GoAffPro)
+            • Refactored backend services and data layer, reducing latency by ~40%
             `,
         imageUrl: nfseekString,
         githubLink: "",
@@ -25,10 +24,10 @@ export const projects: CardProps[] = [
     {
         title: "Von Haus Lola Mora",
         description: `
-            • Developed backend APIs and admin system for real business operations
-            • Reduced manual work through custom admin dashboard
-            • Designed data structures and business logic for content management
-            • Delivered fullstack solution used in production by real users
+            • Full-stack web application & custom admin system used in production
+            • Built responsive UI components connected to RESTful APIs and database services
+            • Designed database schemas and automated content management workflows
+            • Streamlined client operations, eliminating manual admin overhead
             `,
         imageUrl: vonhausString,
         githubLink: "https://github.com/gonzalo991/von-haus-frontend",
@@ -38,9 +37,9 @@ export const projects: CardProps[] = [
     {
         title: "Digital Mirage E-Commerce",
         description: `
-            • Built fullstack e-commerce system (MERN stack)
-            • Implemented product, cart and API workflows
-            • Focused on backend integration and data flow
+            • End-to-end e-commerce system built with React, Node.js & MongoDB
+            • Implemented dynamic product management, persistent cart & order processing workflows
+            • Designed secure JWT authentication, RESTful endpoints, and database state handling
             `,
         imageUrl: digitalMirageString,
         githubLink: "https://github.com/gonzalo991/Digital-Mirage-Frontend",

@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
         >
             {/* IMAGE */}
             <div className="card-image">
-                <figure className="image is-4by3">
+                <figure className="image is-16by9">
                     <img
                         src={imageUrl}
                         alt={title}
@@ -38,15 +38,15 @@ const Card: React.FC<CardProps> = ({
                 </figure>
             </div>
 
-            {/* CONTENT */}
+            {/* CONTENT (Flex Grow para estirar todas las cards por igual) */}
             <div
                 className="card-content"
                 style={{
-                    padding: "0.9rem",
+                    padding: "1rem",
                     display: "flex",
                     flexDirection: "column",
                     gap: "0.5rem",
-                    flexGrow: 1  
+                    flexGrow: 1
                 }}
             >
                 {/* TITLE */}
@@ -60,26 +60,26 @@ const Card: React.FC<CardProps> = ({
                     {title}
                 </p>
 
-                {/* DESCRIPTION */}
+                {/* DESCRIPTION (Se adapta sin cortar líneas fijos) */}
                 <div
                     style={{
                         color: "#d1d5db",
                         fontSize: "0.85rem",
-                        lineHeight: "1.4",
+                        lineHeight: "1.45",
                         whiteSpace: "pre-line",
-                        maxHeight: "120px",
-                        overflow: "hidden"
+                        flexGrow: 1
                     }}
                 >
                     {description}
                 </div>
             </div>
 
-            {/* FOOTER */}
+            {/* FOOTER (Pinchado abajo de todo con marginTop auto) */}
             <footer
                 className="card-footer"
                 style={{
-                    borderTop: "1px solid rgba(255,255,255,0.05)"
+                    borderTop: "1px solid rgba(255,255,255,0.05)",
+                    marginTop: "auto"
                 }}
             >
                 {githubLink && (

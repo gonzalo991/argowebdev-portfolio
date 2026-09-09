@@ -1,6 +1,6 @@
 import { GrGithub, GrLinkedin } from "react-icons/gr";
 import mifoto from "../img/mifoto.png";
-import curriculum from "../files/CvGonzaloAraya.pdf";
+import curriculum from "../files/Gonzalo_Araya_Fullstack_Engineer.pdf";
 
 const Developer: React.FC = () => {
     return (
@@ -17,23 +17,23 @@ const Developer: React.FC = () => {
                         <div className="column mt-3 is-6-desktop is-12-mobile has-text-centered-mobile">
 
                             <h1 className="title is-2-mobile is-1-desktop" style={{ color: "#f9fafb" }}>
-                                Backend Engineer
+                                Fullstack Engineer
                             </h1>
 
                             <h2
                                 className="subtitle mt-4 is-5-mobile is-4-desktop"
                                 style={{ color: "#d1d5db", maxWidth: "520px", margin: "0 auto" }}
                             >
-                                I build APIs and backend systems that solve real business problems
-                                and improve performance in production environments
+                                I engineer resilient web applications and scalable backend systems 
+                                tailored to deliver real business impact.
                             </h2>
 
                             <p
                                 className="mt-4"
                                 style={{ color: "#9ca3af", maxWidth: "520px", margin: "0 auto" }}
                             >
-                                Experience in authentication, payments, performance optimization and
-                                refactoring legacy systems with measurable impact (↓ latency, ↑ stability).
+                                Focused on the TypeScript ecosystem (NestJS, Next.js, Node.js), 
+                                clean architecture, database optimization, and cloud deployments (Docker/GCP).
                             </p>
 
                             {/* BOTONES */}

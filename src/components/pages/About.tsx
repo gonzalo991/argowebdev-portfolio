@@ -12,18 +12,20 @@ const About: React.FC = () => {
                 About me
             </h2>
 
-            <p style={{ color: "#d1d5db", marginBottom: "1rem" }}>
-                I focus on solving real product problems, not just building features.
+            <p style={{ color: "#d1d5db", marginBottom: "1rem", fontSize: "1.1rem" }}>
+                I bridge the gap between business requirements and production-ready software, 
+                delivering end-to-end applications built for stability and scalability.
             </p>
 
             <p style={{ color: "#9ca3af", marginBottom: "1rem" }}>
-                My work usually involves improving existing systems — reducing latency,
-                fixing architectural issues, and making applications more reliable in production.
+                My technical core centers on Clean Architecture, domain-driven backend design with NestJS, 
+                and responsive frontends with Next.js. I focus on writing maintainable code, 
+                optimizing database performance (SQL/NoSQL), and automating deployments with Docker and GCP.
             </p>
 
             <p style={{ color: "#9ca3af" }}>
-                I enjoy taking unclear requirements and turning them into clean,
-                maintainable backend solutions that scale with real usage.
+                Whether integrating complex third-party services, handling IoT/NFC workflows, 
+                or establishing security protocols, I prioritize pragmatic solutions that simplify long-term software maintenance.
             </p>
 
         </div>

@@ -1,3 +1,4 @@
+import React from "react";
 import { experiencia } from "../data/experience";
 
 const Experience: React.FC = () => {
@@ -26,7 +27,7 @@ const Experience: React.FC = () => {
                 {/* TIMELINE */}
                 <div style={{ position: "relative", paddingLeft: "20px" }}>
 
-                    {/* vertical line */}
+                    {/* VERTICAL LINE */}
                     <div
                         style={{
                             position: "absolute",
@@ -38,106 +39,116 @@ const Experience: React.FC = () => {
                         }}
                     />
 
-                    {experiencia.map((exp, idx) => (
-                        <div
-                            key={idx}
-                            style={{
-                                position: "relative",
-                                marginBottom: "1.8rem"
-                            }}
-                        >
+                    {experiencia.map((exp, idx) => {
+                        // Soporta tanto array de strings como string multilínea con bullets
+                        const bulletList: string[] = Array.isArray(exp.descripcion)
+                            ? exp.descripcion
+                            : exp.descripcion
+                                  .trim()
+                                  .split("\n")
+                                  .map((line) => line.replace("•", "").trim())
+                                  .filter((line) => line !== "");
 
-                            {/* dot */}
+                        return (
                             <div
+                                key={idx}
                                 style={{
-                                    position: "absolute",
-                                    left: "-2px",
-                                    top: "6px",
-                                    width: "10px",
-                                    height: "10px",
-                                    borderRadius: "50%",
-                                    backgroundColor: "#38bdf8"
-                                }}
-                            />
-
-                            {/* CONTENT BOX */}
-                            <div
-                                style={{
-                                    backgroundColor: "#111827",
-                                    padding: "1rem 1.2rem",
-                                    borderRadius: "8px",
-                                    border: "1px solid rgba(255,255,255,0.05)"
+                                    position: "relative",
+                                    marginBottom: "1.8rem"
                                 }}
                             >
 
-                                {/* TOP ROW */}
+                                {/* DOT */}
                                 <div
                                     style={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        flexWrap: "wrap",
-                                        gap: "6px"
+                                        position: "absolute",
+                                        left: "-2px",
+                                        top: "6px",
+                                        width: "10px",
+                                        height: "10px",
+                                        borderRadius: "50%",
+                                        backgroundColor: "#38bdf8"
+                                    }}
+                                />
+
+                                {/* CONTENT BOX */}
+                                <div
+                                    style={{
+                                        backgroundColor: "#111827",
+                                        padding: "1.2rem",
+                                        borderRadius: "8px",
+                                        border: "1px solid rgba(255,255,255,0.05)"
                                     }}
                                 >
-                                    <h3
+
+                                    {/* TOP ROW */}
+                                    <div
                                         style={{
-                                            color: "#f9fafb",
-                                            fontWeight: 600,
-                                            fontSize: "1rem"
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            flexWrap: "wrap",
+                                            gap: "6px"
                                         }}
                                     >
-                                        {exp.puesto}
-                                    </h3>
+                                        <h3
+                                            style={{
+                                                color: "#f9fafb",
+                                                fontWeight: 600,
+                                                fontSize: "1.05rem"
+                                            }}
+                                        >
+                                            {exp.puesto}
+                                        </h3>
 
-                                    <span
+                                        <span
+                                            style={{
+                                                color: "#9ca3af",
+                                                fontSize: "0.85rem"
+                                            }}
+                                        >
+                                            {exp.fechaInicio} – {exp.fechaFin}
+                                        </span>
+                                    </div>
+
+                                    {/* COMPANY */}
+                                    <p
                                         style={{
-                                            color: "#9ca3af",
-                                            fontSize: "0.8rem"
+                                            color: "#38bdf8",
+                                            fontSize: "0.9rem",
+                                            fontWeight: 500,
+                                            marginBottom: "0.75rem"
                                         }}
                                     >
-                                        {exp.fechaInicio} – {exp.fechaFin}
-                                    </span>
-                                </div>
+                                        {exp.empresa}
+                                    </p>
 
-                                {/* COMPANY */}
-                                <p
-                                    style={{
-                                        color: "#38bdf8",
-                                        fontSize: "0.9rem",
-                                        marginBottom: "0.5rem"
-                                    }}
-                                >
-                                    {exp.empresa}
-                                </p>
-
-                                {/* DESCRIPTION */}
-                                <ul
-                                    style={{
-                                        color: "#d1d5db",
-                                        paddingLeft: "1rem",
-                                        margin: 0
-                                    }}
-                                >
-                                    {exp.descripcion
-                                        .trim()
-                                        .split("\n")
-                                        .filter(line => line.trim() !== "")
-                                        .map((line, i) => (
+                                    {/* DESCRIPTION BULLETS */}
+                                    <ul
+                                        style={{
+                                            color: "#d1d5db",
+                                            paddingLeft: "1.2rem",
+                                            margin: 0,
+                                            listStyleType: "disc"
+                                        }}
+                                    >
+                                        {bulletList.map((bullet, i) => (
                                             <li
                                                 key={i}
                                                 style={{
-                                                    marginBottom: "0.3rem",
-                                                    fontSize: "0.9rem"
+                                                    marginBottom: "0.4rem",
+                                                    fontSize: "0.88rem",
+                                                    lineHeight: "1.5"
                                                 }}
                                             >
-                                                {line.replace("•", "").trim()}
+                                                {bullet}
                                             </li>
                                         ))}
-                                </ul>
+                                    </ul>
 
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
 
                 </div>
 
